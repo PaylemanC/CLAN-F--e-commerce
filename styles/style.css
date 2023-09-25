@@ -17,5 +17,6 @@ p {
 /*  ----------- FIN DE RESETS -----------  */
 
 :root {
-    /* VARIABLES */
+    --turquesa-opaco: #00ADB5;
+    --turquesa-intenso: #00FFF5;
 }

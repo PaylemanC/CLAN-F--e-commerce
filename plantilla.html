@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href=""> <!-- HOJA DE ESTILOS ESPECIFICA-->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Pacifico&family=Playfair+Display:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="assets/fav.ico" type="image/x-icon">
     
     <!-- Etiquetas meta para SEO y social media -->
@@ -24,7 +25,31 @@
 </head>
 <body>
     <header>
-        <nav></nav>
+        <nav class="main-nav">
+        
+            <div id="toggle-menu" class="toggle-menu">
+                <label for="toggle-menu-checkbox">
+                    <button id="abrir" class="abrir-menu"><i class="bi bi-menu-button-wide"></i></button>
+                </label>
+            </div>
+        
+            <input type="checkbox" class="toggle-menu__checkbox" id="toggle-menu-checkbox" />
+        
+            <ul id="main-menu" class="main-menu">
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Inicio</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Quienes somos</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Productos</a>
+                </li>
+                <li class="main-menu__item">
+                    <a href="#" class="main-menu__link">Contacto</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>

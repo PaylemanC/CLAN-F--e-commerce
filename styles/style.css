@@ -23,7 +23,8 @@ p {
     --turquesa-opaco: #00ADB5;
     --turquesa-intenso: #00FFF5;
     --oscuro: #222831;
-    --gris-oscuro: #393E46;
+    --gris-oscuro: #292929;
+    --relieve: #393E46;
     --gris-claro: #BDBDBD;
     --texto: #212121;
     --texto-secundario: #757575;
@@ -32,6 +33,11 @@ p {
     --font-lato: 'Lato', sans-serif;
     --title-pacifico: 'Pacifico', cursive;
     --title-playfair: 'Playfair Display', serif;
+}
+
+::selection {
+    background-color: var(--turquesa-intenso);
+    color: var(--texto);
 }
 
 /*----------------- NAV ------------------*/

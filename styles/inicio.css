@@ -1,3 +1,47 @@
-h1 {
-    color: var(--turquesa-opaco);
+.introduction {
+    background-color: var(--gris-oscuro);
+    padding: 80px 120px 50px;
+}
+
+.introduction__content {
+    color: white;
+}
+
+.introduction__title {
+    display: flex;
+    align-items: flex-end;
+}
+
+.introduction__title--h1 {
+    font-family: var(--title-playfair);
+    font-size: 8rem;   
+    font-weight: bolder;
+    line-height: .9;
+}
+
+.introduction__title--dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    background-color: var(--turquesa-intenso);
+}
+
+.introduction__subtitle {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 6.4rem;
+    text-transform:lowercase;
+    margin: 8px 0 20px;
+}
+
+.introduction__paragraph {
+    max-width: 650px;
+    margin-bottom: 20px;
+}
+
+.introduction__paragraph--name {
+    font-family: var(--title-playfair);
+    color: var(--turquesa-intenso);
+    font-size: 1.8rem;
 }

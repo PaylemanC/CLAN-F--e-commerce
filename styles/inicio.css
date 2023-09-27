@@ -27,12 +27,27 @@
     background-color: var(--turquesa-intenso);
 }
 
-.introduction__subtitle {
+.introduction__subtitles-container {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 86px;
+    padding: 12px 0;
+    display: flex;
+}
+
+.introduction__subtitles {
+    overflow: hidden;
+    width: 100%;
+}
+
+.subtitle {
     font-weight: lighter;
     font-style: italic;
     font-size: 6.4rem;
     text-transform:lowercase;
-    margin: 8px 0 20px;
+    display: block;
+    height: 100%;
+    animation: subtitles 10s infinite;
 }
 
 .introduction__paragraph {
@@ -44,4 +59,38 @@
     font-family: var(--title-playfair);
     color: var(--turquesa-intenso);
     font-size: 1.8rem;
+}
+
+@keyframes subtitles {
+    10% {
+      transform: translateY(-105%);
+    }
+  
+    25% {
+      transform: translateY(-100%);
+    }
+  
+    35% {
+      transform: translateY(-205%);
+    }
+  
+    50% {
+      transform: translateY(-200%);
+    }
+  
+    60% {
+      transform: translateY(-305%);
+    }
+  
+    75% {
+      transform: translateY(-300%);
+    }
+  
+    85% {
+      transform: translateY(-405%);
+    }
+  
+    100% {
+      transform: translateY(-400%);
+    }
 }

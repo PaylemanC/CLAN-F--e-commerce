@@ -1,15 +1,22 @@
 .introduction {
     background-color: var(--gris-oscuro);
-    padding: 80px 120px 50px;
+    padding: 60px 120px 50px;
+    position: relative;
+}
+
+.introduction-decoration {
+    position: absolute;
+    background: url('../assets/img/globo.png');
+    height: 280px;
+    width: 280px;
+    bottom: 0;
+    right: 0;
 }
 
 .introduction__content {
     color: white;
-}
-
-.introduction__title {
-    display: flex;
-    align-items: flex-end;
+    position: relative;
+    z-index: 1;
 }
 
 .introduction__title--h1 {
@@ -38,6 +45,10 @@
 .introduction__subtitles {
     overflow: hidden;
     width: 100%;
+}
+
+.introduction__subtitles.mobile {
+    display: none;
 }
 
 .subtitle {
@@ -98,6 +109,7 @@
 .introduction__button-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 32px;
 }
 
@@ -114,6 +126,9 @@
     z-index: 1;
     overflow: hidden;
     transition: 0.5s;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
 }
 
 .introduction-btn:before {
@@ -184,4 +199,28 @@
         opacity: 0;
         top: 32px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .introduction {
+        padding: 6rem 3.2rem;
+    }
+
+    .mouse-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .introduction__title--h1, .introduction__subtitles {
+        text-align: center;
+    } 
+    
+    .introduction__subtitles.desktop {
+        display: none;
+    }
+
+    .introduction__subtitles.mobile {
+        display: block;
+    } 
 }

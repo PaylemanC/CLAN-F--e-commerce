@@ -1,3 +1,4 @@
+/* PRIMERA SECCIÓN: INTRODUCCIÓN */
 .introduction {
     background-color: var(--gris-oscuro);
     padding: 60px 120px 50px;
@@ -201,6 +202,89 @@
     }
 }
 
+
+/* SEGUNDA SECCIÓN: ABOUT */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__logo-container {
+    width: auto;
+    height: 88px;
+}
+
+.about__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about__description {
+    width: 60vw;
+    font-family: var(--title-playfair);
+    color: var(--texto);
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.6rem;
+    margin: 12px 0;
+    letter-spacing: 1px;
+}
+
+.about__sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    opacity: 65%;
+}
+
+.about__sponsor {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* CUARTA SECCIÓN: CARDS CON INFORMACIÓN RELEVANTE SOBRE LAS COMPRAS */
+.purchase-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 16px;
+    margin: 32px 16px;
+}
+
+.purchase-info-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--texto);
+    padding: 16px;
+    flex-wrap: wrap;
+}
+
+.purchase-info-card__icon-container {
+    width: 68px;
+    height: auto;
+    padding: 12px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 6px #d3d3d3;
+}
+
+.purchase-info-card__content-container {
+    max-width: 380px;
+}
+
+.purchase-info-card__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
 @media screen and (max-width: 768px) {
     .introduction {
         padding: 6rem 3.2rem;
@@ -208,6 +292,10 @@
 
     .mouse-container {
         display: none;
+    }
+
+    .about {
+        margin-top: 24px;
     }
 }
 

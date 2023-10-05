@@ -23,6 +23,7 @@ p {
     /* Colores: (no abusar de los turquesas, son para detalles)*/
     --turquesa-opaco: #00ADB5;
     --turquesa-intenso: #00FFF5;
+    --turquesa-soft: #85D8DC;
     --oscuro: #222831;
     --gris-oscuro: #292929;
     --relieve: #393E46;
@@ -79,7 +80,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #85D8DC;
+    background-color: var(--turquesa-soft);
     transition: transform 0.3s;
     transform: translateY(-100%);
     font-size: 1.6rem;
@@ -150,9 +151,12 @@ img {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 0.1fr);
     padding: 16px;
-    background-color: grey
+    background-color: var(--relieve);
 }
 
+.content {
+    color: white;
+}
 
 .footer .slogan,
 .footer .desc,
@@ -170,7 +174,7 @@ img {
 .footer .slogan {
     grid-column-start: 1;
     grid-column-end: -1;
-    color: #85D8DC;
+    color: var(--turquesa-soft);
 }
 
 .footer .slogan h3 {
@@ -186,7 +190,7 @@ img {
 
 .footer .sec ul {
     list-style-type: none;
-    font-size: 20px;
+    font-size: 1.8rem;
     padding: 5px;
 
 }
@@ -200,9 +204,9 @@ img {
 }
 
 .footer .cont .items {
-    font-size: 20px;
+    font-size: 1.8rem;
     padding-bottom: 10px;
-    color: var(--texto);
+    color: white;
 }
 
 .footer .redes .iconos {
@@ -228,7 +232,7 @@ img {
     .footer .slogan {
         grid-column-start: 1;
         grid-column-end: -1;
-        color: #85D8DC;
+        color: var(--turquesa-soft);
         font-size: 30px;
     }
 

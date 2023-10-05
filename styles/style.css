@@ -12,6 +12,7 @@ html {
 }
 
 p {
+    color: var(--texto);
     font-size: 1.6rem;
     line-height: 1.5;
 }
@@ -82,7 +83,7 @@ img {
     transition: transform 0.3s;
     transform: translateY(-100%);
     font-size: 1.6rem;
-    padding:2rem;
+    padding: 8px;
     justify-content: space-between;
 }
 
@@ -106,7 +107,6 @@ img {
     .main-menu {
         flex-direction: row;
         justify-content: space-between; 
-        padding: 2rem;
         transform: translateY(0);
     }
 

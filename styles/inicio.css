@@ -65,6 +65,7 @@
 .introduction__paragraph {
     max-width: 650px;
     margin-bottom: 32px;
+    color: white;
 }
 
 .introduction__paragraph--name {

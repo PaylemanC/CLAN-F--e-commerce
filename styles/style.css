@@ -133,3 +133,119 @@ img {
 }
 
 /*---------------- FIN NAV ----------------*/
+
+/* -------------- FOOTER ------------------*/
+
+.footer {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 0.1fr);
+}
+
+
+.footer .slogan,
+.footer .desc,
+.footer .sec,
+.footer .cont,
+.footer .redes {
+    background: grey;
+    text-align: center;
+}
+
+.footer .desc {
+    grid-column: span 1;
+    font-size: 20px;
+}
+
+.footer .slogan {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    color: #85D8DC;
+    font-size: 30px;
+}
+
+.titulo {
+    font-size: 20px;
+}
+
+.footer .sec ul {
+    list-style-type: none;
+    font-size: 20px;
+    padding: 5px;
+
+}
+
+.sec .main-menu .main-menu__item .main-menu__link {
+    text-decoration: none;
+}
+
+.main-menu__item {
+    padding-bottom: 10px;
+}
+
+.footer .cont .items {
+    font-size: 20px;
+    padding-bottom: 10px;
+    ;
+}
+
+.footer .redes .iconos {
+    font-size: 25px;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+
+    .footer .desc {
+        display: none;
+    }
+
+    .footer .sec,
+    .footer .cont,
+    .footer .redes {
+        grid-column: 1 / -1;
+        font-size: 10px;
+    }
+
+    .footer .slogan {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        color: #85D8DC;
+        font-size: 30px;
+    }
+
+    .titulo {
+        font-size: 25px;
+    }
+
+    .footer .sec ul {
+        list-style-type: none;
+        font-size: 20px;
+
+    }
+
+    .footer .sec li {
+        padding-top: 5px;
+    }
+
+    .redes .meta {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .footer .redes .iconos-redes-sociales a {
+        font-size: 25px;
+
+    }
+
+    .footer .cont .items {
+        font-size: 20px;
+    }
+
+}
+
+/* ------------- FIN FOOTER --------------*/

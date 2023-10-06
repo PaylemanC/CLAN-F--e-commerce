@@ -159,3 +159,16 @@
 .product-card__detail-button:hover .button-text {
     color: #fff;
 }
+
+@media screen and (max-width: 574px) {
+    .product-card__img-container {
+        margin: 8px auto;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 475px) { /* 375 */
+    .product-card__img-container {
+        width: 100%;
+    }
+}

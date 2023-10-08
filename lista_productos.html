@@ -29,7 +29,14 @@
         
             <div id="toggle-menu" class="toggle-menu">
                 <label for="toggle-menu-checkbox">
-                    <button id="abrir" class="abrir-menu"><i class="bi bi-menu-button-wide"></i></button>
+                    <button id="abrir" class="abrir-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="2.5" stroke="#393E46" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg>
+                    </button>
                 </label>
             </div>
         
@@ -223,14 +230,28 @@
                     <span class="button-text">Ver detalle</span>
                 </a>
             </div>
+            <div class="product-card">
+                <div class="product-card__img-container">
+                    <img src="assets/img/globo.png" alt="Producto con IA" class="product-card__img"> <!-- Imágenes insertar desde ruta assets/img/productos/ -->
+                </div>
+                <div class="product-card__info-container">
+                    <h3 class="product-card__title">Producto con IA</h3>
+                    <div class="product-card__purchase">
+                        <p class="product-card__price">$ 1.500</p>
+                        <button class="product-card__cart-button"></button>
+                    </div>
+                </div>
+                <a href="#" class="product-card__detail-button">
+                    <span class="circle">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Ver detalle</span>
+                </a>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
-    
-        <div class="slogan">
-            <h3>A la confianza de la Innovación</h3>
-        </div>
     
         <div class="desc">
             <h4 class="titulo">CLAN-F</h4>

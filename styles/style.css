@@ -90,6 +90,8 @@ p {
 
 .main-menu__links-container {
     text-align: center;
+    position: relative;
+    
 }
 
 .main-menu--show {
@@ -97,6 +99,7 @@ p {
     flex-direction: column;
     align-items: center;
     transform: translateY(0);
+    
 }
 
 .toggle-menu__checkbox {

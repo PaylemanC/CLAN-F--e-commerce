@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLAN-F</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+
     <!-- <link rel="shortcut icon" href="" type="svg"> -->
 
     <meta name="title" content="CLAN-F | Tienda electrónica de productos con IA" />
@@ -21,16 +23,144 @@
     <meta property="og:description"
         content="Bienvenido a CLAN-F, tu tienda electrónica de productos personales y de hogar potenciados con Inteligencia Artificial. Descubre la innovación y comodidad que la IA puede ofrecerte en tus actividades diarias." />
     <meta property="og:image" content="" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/contacto.js"></script>
+
+
+
 </head>
 
 <body>
     <header>
-        <nav></nav>
+        <nav class="main-nav">
+
+            <div id="toggle-menu" class="toggle-menu">
+                <label for="toggle-menu-checkbox">
+                    <button id="abrir" class="abrir-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="32"
+                            height="32" viewBox="0 0 24 24" stroke-width="2.5" stroke="#393E46" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg>
+                    </button>
+                </label>
+            </div>
+
+            <input type="checkbox" class="toggle-menu__checkbox" id="toggle-menu-checkbox" />
+
+            <ul id="main-menu" class="main-menu">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/logo/icono.png" alt="Logo de CLAN-F" class="logo-img"></a>
+                </div>
+                <div class="main-menu__links-container">
+                    <li class="main-menu__item">
+                        <a href="index.html" class="main-menu__link">Inicio</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="quienes_somos.html" class="main-menu__link">Quienes somos</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="lista_productos.html" class="main-menu__link">Productos</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="contacto.html" class="main-menu__link">Contacto</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
     </header>
 
     <main>
 
-        <h1>Contacto</h1>
+        <div class="container">
+            
+            <div class="row">
+
+                <div class="col-md-5">
+                    <div class="user">
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+
+                    <div class="mt-5">
+                        <div class="d-flex">
+                            <i class="bi bi-geo-alt"></i>
+                            <p>Buenos Aires, Argentina</p>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="bi bi-telephone"></i>
+                            <p>3725-3685</p>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="bi bi-envelope"></i>
+                            <p>ventas@gmail.com</p>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="bi bi-geo-alt"></i>
+                            <p>www.clan-f.com.ar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+
+                    <form action="" class="form_contact">
+
+                        <h4>Dejanos tu mensaje!</h4>
+
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre y Apellido</label>
+                            <input type="text" class="form-control" id="names" placeholder="Nombre y Apellido"
+                                minlength="3" maxlength="15" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electronico</label>
+                            <input type="mail" class="form-control" id="email" placeholder="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="celular" class="form-label">Numero Celular</label>
+                            <input type="number" class="form-control" id="celular" placeholder="Telefono">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" row="3" minlength="5" maxlength="60"
+                                required></textarea>
+                        </div>
+                        <button type="submit" onclick="enviarFormulario" class="btn btn-primary" id="btnSend">Enviar
+                            Mensaje</button>
+                    </form>
+
+                </div>
+
+            </div><br>
+
+            <h2>Te dejamos nuestra Ubicacion!</h2>
+            <div class="mapa"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26260.575272888287!2d-58.57256463734679!3d-34.640256970265284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1696079173306!5m2!1ses-419!2sar"
+                    width="100%" height="500" style="border-radius:10px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 
     </main>
 

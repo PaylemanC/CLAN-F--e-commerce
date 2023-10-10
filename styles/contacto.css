@@ -9,10 +9,7 @@ body{
 .container {
     width: 80%;   
     padding: 45px;
-    position: relative;
-    top: 550px;
     left: 40%;    
-    transform: translate(-50%, -50%);
 }
 
 
@@ -45,6 +42,19 @@ body{
     background-size: cover;
     background-position: center center;
 }
+
+.col-md-7 {
+    padding: 16px;
+}
+
+.form_contact, .form_contact input, .form_contact button {
+    font-size: 1.6rem;
+}
+
+.form_contact h4 {
+    font-size: 1.8rem;
+}
+
 .form-control {
     height: 52px;
     background: #fff;

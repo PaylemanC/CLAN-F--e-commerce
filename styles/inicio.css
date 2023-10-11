@@ -133,7 +133,7 @@
     text-align: center;
 }
 
-.introduction-btn:before {
+.button__animation-content:before {
     content: "";
     position: absolute;
     background: var(--turquesa-opaco);
@@ -143,17 +143,17 @@
     z-index: -1;
 }
 
-.introduction-btn:hover {
+.button__animation-content:hover {
     color: #ffffff;
 }
 
-.introduction-btn:before {
+.button__animation-content:before {
     top: 100%;
     left: 100%;
     transition: 0.7s;
 }
 
-.introduction-btn:hover:before {
+.button__animation-content:hover:before {
     top: -30px;
     left: -30px;
 }
@@ -267,6 +267,152 @@
     object-fit: contain;
 }
 
+/*TERCERA SECCIÓN: GRILLA DE PRODUCTOS DESTACADOS*/
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr)); 
+    grid-auto-rows: 220px; 
+    justify-content: center;
+    background: #f7f7f7;
+    padding: 30px;
+}
+
+.f-product {
+    transition: transform 0.3s;
+}
+
+.f-product:hover {
+    border-radius: 4px;
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+.f-product--big {
+    grid-area: 1 / 1 / 3 / 3;
+    background: #80b3b1;
+    background: linear-gradient(180deg, rgb(141 183 181) 0%, rgb(165 215 214) 100%);
+    padding: 32px;
+    position: relative;
+}
+
+.f-product--square {
+    padding: 8px;
+}
+
+.f-product--long {
+    padding: 16px; 
+}
+
+.f-product--long {
+    grid-area: 2 / 3 / 3 / 5;
+    background: url('../assets/img/grid-asistentes.png') no-repeat bottom / contain;
+    background-color: #e1e1e1;
+}
+
+.f-product--big .f-product--image {
+    position: absolute;
+    background: url('../assets/img/grid-camara.png') no-repeat center / contain;
+    width: 75%;
+    height: 75%;
+    bottom: -60px;
+    left: 13%;
+}
+
+.f-product--square.aspiradora {
+    background: url('../assets/img/grid-aspiradora.png') no-repeat bottom / contain;
+    background-color: grey;
+}
+
+.f-product--square.termostato {
+    background: url('../assets/img/grid-termostato.jpg') no-repeat bottom / contain;
+    background-color: #9ea3a7;
+}
+
+.f-product__caption {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.4;
+}
+
+.f-product--big .f-product__caption {
+    font-size: 2rem;
+    letter-spacing: 4px;
+}
+
+.f-product--long .f-product__caption {
+    color: var(--texto);
+    margin-bottom: 12px;
+}
+
+.f-product--square .f-product__price {
+    font-size: 1.8rem;
+    color: #ededed;
+}
+
+.f-product__link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.f-product__link {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 8px 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--turquesa-opaco);
+    transition: color .5s;
+    z-index: 1;
+    border-radius: 8px;
+    background-color: rgb(247, 247, 247);
+    color: var(--turquesa-opaco);
+}
+
+.f-product__link-container .f-product__link {
+    font-size: 1.7rem;
+}
+   
+.f-product__link:active:before {
+    background: #009097;
+    transition: background 0s;
+}
+
+.f-product--square {
+    position: relative;
+}
+
+.f-product--square .f-product__arrow {
+    position: absolute;
+    background: #696969;
+    padding: 4px 6px;
+    border-top-left-radius: 4px;
+    bottom: 0;
+    right: 0;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-product--square svg {
+    transition: 0.2s;
+}
+
+.f-product--square:hover .f-product__arrow {
+    background: #111;
+    border-bottom-right-radius: 4px;
+}
+  
+.f-product--square:hover .f-product__arrow svg {
+    transform: translateX(3px);
+}
 
 /* CUARTA SECCIÓN: CARDS CON INFORMACIÓN RELEVANTE SOBRE LAS COMPRAS */
 .purchase-info {
@@ -399,6 +545,29 @@
         grid-row-start: 1;
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+
+    .featured-products {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+
+    .f-product--big {
+        grid-area: 1 / 1 / 2 / 3;
+        background: url('../assets/img/grid-camara.png') no-repeat right bottom / 50%;
+        background-color: #80b3b1;
+        background-blend-mode: multiply;
+    }
+
+    .f-product--big .f-product--image {
+       display: none;
+    }
+
+    .f-product--long {
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .f-product--square {
+        grid-area: auto; 
     }
 }
 

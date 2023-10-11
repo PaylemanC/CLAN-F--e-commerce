@@ -103,6 +103,11 @@ button.hover {
     background: #3371B6;
 }
 
+.bi-telephone, .bi-envelope {
+    display: initial;
+    padding-left: 0;
+}
+
 @media screen and (max-width: 768px) {
     .container{
         top: 700px;

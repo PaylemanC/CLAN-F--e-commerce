@@ -1,17 +1,19 @@
 const formulario = document.getElementById("formulario");
+
 const userName = document.getElementById("userName");
 const userEmail = document.getElementById("userEmail");
-const celular = document.getElementById("celular");
+const userNumber = document.getElementById("userNumber");
 
 const alertSuccess = document.getElementById("alertSuccess");
+
 const alertName = document.getElementById("alertName");
 const alertEmail = document.getElementById("alertEmail");
-const alertCelular = document.getElementById("alertCelular");
+const alertNumber = document.getElementById("alertNumber");
 
 
     const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
     const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
-    const regCelular = /^\d+$/gi;
+    const regUserNumber = /^\d{7,14}$/;
 
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
@@ -26,8 +28,7 @@ const pintarMensajeError = (errores) => {
 };
 
 formulario.addEventListener("submit", (e) => {
-    e.preventDefault();
-
+    e.preventDefault();    
 
     alertSuccess.classList.add("d-none");
     const errores = [];
@@ -67,17 +68,21 @@ formulario.addEventListener("submit", (e) => {
 
     // validar Celular
     
-    if (!regCelular.test(celular.value) || !celular.value.trim()) {
-        celular.classList.add("is-invalid");
+    if (!regUserNumber.test(userNumber.value) || !userNumber.value.trim()) {
+        userNumber.classList.add("is-invalid");
 
         errores.push({
-            tipo: alertCelular,
+            tipo: alertNumber,
             msg: "Formato no válido campo Telefono, solo numeros",
         });
     } else {
-        celular.classList.remove("is-invalid");
-        celular.classList.add("is-valid");
-        alertCelular.classList.add("d-none");
+        userNumber.classList.remove("is-invalid");
+        userNumber.classList.add("is-valid");
+        alertNumber.classList.add("d-none");
+    }
+    if (errores.length !== 0) {
+        pintarMensajeError(errores);
+        return;
     }
 
     console.log("Formulario enviado con éxito");

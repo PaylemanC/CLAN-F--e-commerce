@@ -13,7 +13,7 @@ const alertNumber = document.getElementById("alertNumber");
 
     const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
     const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
-    const regUserNumber = /^\d{7,14}$/;
+    const regUserNumber = /^\d+$/gi;
 
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");

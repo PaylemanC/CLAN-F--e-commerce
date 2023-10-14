@@ -3,12 +3,14 @@ const formulario = document.getElementById("formulario");
 const userName = document.getElementById("userName");
 const userEmail = document.getElementById("userEmail");
 const userNumber = document.getElementById("userNumber");
+const mensaje = document.getElementById("mensaje");
 
 const alertSuccess = document.getElementById("alertSuccess");
 
 const alertName = document.getElementById("alertName");
 const alertEmail = document.getElementById("alertEmail");
 const alertNumber = document.getElementById("alertNumber");
+const alertMsj = document.getElementById("alertMsj");
 
 
     const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
@@ -17,7 +19,7 @@ const alertNumber = document.getElementById("alertNumber");
 
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
-    alertSuccess.textContent = "Mensaje enviado con éxito";
+    alertSuccess.textContent = "¡Mensaje enviado con éxito!";
 };
 
 const pintarMensajeError = (errores) => {
@@ -39,7 +41,7 @@ formulario.addEventListener("submit", (e) => {
 
         errores.push({
             tipo: alertName,
-            msg: "Formato no válido campo nombre, solo letras",
+            msg: "Formato no válido para campo nombre, solo letras.",
         });
     } else {
         userName.classList.remove("is-invalid");
@@ -61,30 +63,40 @@ formulario.addEventListener("submit", (e) => {
         alertEmail.classList.add("d-none");
     }
 
-    if (errores.length !== 0) {
-        pintarMensajeError(errores);
-        return;
-    }
-
-    // validar Celular
-    
+    // validar Celular    
     if (!regUserNumber.test(userNumber.value) || !userNumber.value.trim()) {
         userNumber.classList.add("is-invalid");
 
         errores.push({
             tipo: alertNumber,
-            msg: "Formato no válido campo Telefono, solo numeros",
+            msg: "Formato no válido para campo teléfono, solo números.",
         });
     } else {
         userNumber.classList.remove("is-invalid");
         userNumber.classList.add("is-valid");
         alertNumber.classList.add("d-none");
     }
+
+    //validar casilla mensaje:
+    if (mensaje.value.trim() === "") {
+        mensaje.classList.add("is-invalid");
+    
+        errores.push({
+            tipo: alertMsj,
+            msg: "El campo mensaje no puede estar vacío.",
+        });
+    } else {
+        mensaje.classList.remove("is-invalid");
+        mensaje.classList.add("is-valid");
+        alertMsj.classList.add("d-none");
+    }
+
+    //Validar TODOS:
     if (errores.length !== 0) {
         pintarMensajeError(errores);
         return;
     }
 
-    console.log("Formulario enviado con éxito");
+    console.log("¡Formulario enviado con éxito!");
     pintarMensajeExito();
 });

@@ -1,3 +1,4 @@
+// Variables para manipular el DOM entorno al formulario: 
 const formulario = document.getElementById("formulario");
 
 const userName = document.getElementById("userName");
@@ -12,10 +13,12 @@ const alertEmail = document.getElementById("alertEmail");
 const alertNumber = document.getElementById("alertNumber");
 const alertMsj = document.getElementById("alertMsj");
 
+// Patrones regex de validación de campos:
+const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
+const regUserNumber = /^\d+$/gi;
 
-    const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-    const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
-    const regUserNumber = /^\d+$/gi;
+const errores = [];
 
 const pintarMensajeExito = () => {
     alertSuccess.classList.remove("d-none");
@@ -29,67 +32,35 @@ const pintarMensajeError = (errores) => {
     });
 };
 
+//Validación base: verificación de patrones regex y que no haya campos vacíos, maneja el .remove y .add de las clases de CSS.
+function validar(campo, mensajeAlerta, elementoAlerta, patron = null) {
+    if (campo.value.trim() === "" || patron && (!patron.test(campo.value) || !campo.value.trim())) {
+        campo.classList.add("is-invalid");
+        elementoAlerta.classList.remove("d-none");
+        elementoAlerta.textContent = mensajeAlerta;
+        errores.push({
+            campo: campo,
+            tipo: elementoAlerta,
+            msg: mensajeAlerta
+        });
+    } else {
+        campo.classList.remove("is-invalid");
+        campo.classList.add("is-valid");
+        elementoAlerta.classList.add("d-none");
+    }
+}
+
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();    
 
     alertSuccess.classList.add("d-none");
-    const errores = [];
+    errores.length = 0; 
 
-    // validar nombre
-    if (!regUserName.test(userName.value) || !userName.value.trim()) {
-        userName.classList.add("is-invalid");
-
-        errores.push({
-            tipo: alertName,
-            msg: "Formato no válido para campo nombre, solo letras.",
-        });
-    } else {
-        userName.classList.remove("is-invalid");
-        userName.classList.add("is-valid");
-        alertName.classList.add("d-none");
-    }
-
-    // validar email
-    if (!regUserEmail.test(userEmail.value) || !userEmail.value.trim()) {
-        userEmail.classList.add("is-invalid");
-
-        errores.push({
-            tipo: alertEmail,
-            msg: "Escriba un correo válido",
-        });
-    } else {
-        userEmail.classList.remove("is-invalid");
-        userEmail.classList.add("is-valid");
-        alertEmail.classList.add("d-none");
-    }
-
-    // validar Celular    
-    if (!regUserNumber.test(userNumber.value) || !userNumber.value.trim()) {
-        userNumber.classList.add("is-invalid");
-
-        errores.push({
-            tipo: alertNumber,
-            msg: "Formato no válido para campo teléfono, solo números.",
-        });
-    } else {
-        userNumber.classList.remove("is-invalid");
-        userNumber.classList.add("is-valid");
-        alertNumber.classList.add("d-none");
-    }
-
-    //validar casilla mensaje:
-    if (mensaje.value.trim() === "") {
-        mensaje.classList.add("is-invalid");
-    
-        errores.push({
-            tipo: alertMsj,
-            msg: "El campo mensaje no puede estar vacío.",
-        });
-    } else {
-        mensaje.classList.remove("is-invalid");
-        mensaje.classList.add("is-valid");
-        alertMsj.classList.add("d-none");
-    }
+    //validar(campo a validar, mensaje personalizado para "campo inválido", elemento <p> donde se ingresará mensaje anterior en caso de campo inválido, patrón regex en caso de que lo precise)
+    validar(userName, "Formato no válido para campo nombre, solo letras.", alertName, regUserName);
+    validar(userEmail, "Escriba un correo electrónico válido.", alertEmail, regUserEmail);
+    validar(userNumber, "Formato no válido para campo teléfono, solo números.", alertNumber, regUserNumber);
+    validar(mensaje, "El campo mensaje no puede estar vacío.", alertMsj);
 
     //Validar TODOS:
     if (errores.length !== 0) {

@@ -47,7 +47,7 @@ body{
     padding: 16px;
 }
 
-.form_contact, .form_contact input, .form_contact button {
+.form_contact, .form_contact input, .form_contact button, .form_contact textarea, .form_contact .alertSuccess {
     font-size: 1.6rem;
 }
 

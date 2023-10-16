@@ -14,6 +14,7 @@ const alertNumber = document.getElementById("alertNumber");
 const alertMsj = document.getElementById("alertMsj");
 
 // Patrones regex de validación de campos:
+
 const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
 const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
 const regUserNumber = /^\d+$/gi;
@@ -33,6 +34,7 @@ const pintarMensajeError = (errores) => {
 };
 
 //Validación base: verificación de patrones regex y que no haya campos vacíos, maneja el .remove y .add de las clases de CSS.
+
 function validar(campo, mensajeAlerta, elementoAlerta, patron = null) {
     if (campo.value.trim() === "" || patron && (!patron.test(campo.value) || !campo.value.trim())) {
         campo.classList.add("is-invalid");

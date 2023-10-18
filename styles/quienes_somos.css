@@ -1,3 +1,8 @@
+img {
+    width: 40%;
+    height: auto;
+}
+
 .introduction {
     background-color: var(--gris-oscuro);
     padding: 60px 120px 50px;
@@ -18,13 +23,12 @@
     color: white;
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: 140px;
     display: grid;
 }
 
 .about__logo_clan-f {
-    width: 40%;
-    padding-bottom: 20px;
+    width: 240px;
     display: grid;
     justify-self: center;
 }
@@ -154,14 +158,10 @@ h3 {
 td {
     border: 0 none;
     text-align: center;
-    padding: 20px;
+    padding: 20px 50px;
 }
 
 h1, h3 {
     text-transform: uppercase;
 }
 
-img {
-    width: 40%;
-    height: auto;
-}

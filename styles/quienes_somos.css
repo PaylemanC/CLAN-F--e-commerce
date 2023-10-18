@@ -13,8 +13,8 @@ img {
 .introduction-decoration {
     position: absolute;
     background: url('../assets/img/globo_trazado.png');
-    height: 280px;
-    width: 280px;
+    height: 250px;
+    width: 300px;
     bottom: 0;
     right: 0;
 }
@@ -23,7 +23,6 @@ img {
     color: white;
     position: relative;
     z-index: 1;
-    width: 140px;
     display: grid;
 }
 

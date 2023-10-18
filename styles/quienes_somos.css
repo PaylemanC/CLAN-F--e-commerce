@@ -1,0 +1,167 @@
+.introduction {
+    background-color: var(--gris-oscuro);
+    padding: 60px 120px 50px;
+    position: relative;
+    display: grid;
+}
+
+.introduction-decoration {
+    position: absolute;
+    background: url('../assets/img/globo_trazado.png');
+    height: 280px;
+    width: 280px;
+    bottom: 0;
+    right: 0;
+}
+
+.introduction__content {
+    color: white;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: grid;
+}
+
+.about__logo_clan-f {
+    width: 40%;
+    padding-bottom: 20px;
+    display: grid;
+    justify-self: center;
+}
+
+
+.introduction__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.introduction-btn {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
+    border: 1px solid var(--turquesa-intenso);
+    border-radius: 8px;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    padding: 16px 24px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+
+.scrolling-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.mouse-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -18px;
+}
+
+.mouse {
+    width: 29px;
+    height: 48px;
+    border: 3px solid var(--turquesa-opaco);
+    border-radius: 60px;
+    background: linear-gradient(180deg, rgba(0, 173, 181, 0.72) 0%, rgba(0, 173, 181, 0.00) 100%);
+}
+
+.mouse::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 30px;
+    background-color: var(--relieve);   
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: mouse 1.8s infinite;
+}
+
+@keyframes mouse {
+    from {
+        opacity: 1;
+        top: 15px;
+    }
+    to {
+        opacity: 0;
+        top: 32px;
+    }
+}
+
+.scrolling-caption {
+    color: var(--texto-secundario);
+    font-size: 1.5rem;
+    position: relative;
+    top: -11px;
+    font-style: italic;
+}
+
+.about__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.somos-nosotros {
+    background-color: snow;
+    margin: 30px;
+}
+
+.nos {
+    font-size: xx-large;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.about__logo-container {
+    width: auto;
+    height: 88px;
+}
+
+.mision, .vision {
+    margin: 20px 0 10px;
+}
+
+/* .mi-vi {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    column-gap: 50px;
+} */
+
+td {
+    border: 0 none;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h3 {
+    text-transform: uppercase;
+}
+
+img {
+    width: 40%;
+    height: auto;
+}

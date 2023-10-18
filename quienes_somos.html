@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOMOS CLAN-F</title> <!-- Modifica el título si lo necesitas, pero deja CLAN-F al inicio -->
+    <title>SOMOS CLAN-F</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/inicio.css">
-    <link rel="stylesheet" href=""> <!-- HOJA DE ESTILOS ESPECIFICA-->
+    <link rel="stylesheet" href="styles/quienes_somos.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Pacifico&family=Playfair+Display:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="assets/fav.ico" type="image/x-icon">
@@ -30,7 +29,14 @@
         
             <div id="toggle-menu" class="toggle-menu">
                 <label for="toggle-menu-checkbox">
-                    <button id="abrir" class="abrir-menu"><i class="bi bi-menu-button-wide"></i></button>
+                    <button id="abrir" class="abrir-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="32" height="32" viewBox="0 0 24 24" stroke-width="2.5" stroke="#393E46" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg>
+                    </button>
                 </label>
             </div>
         
@@ -63,32 +69,46 @@
             <div class="introduction-decoration"></div>
             <div class="introduction-container">
                 <div class="introduction__content">
-                    <h1 class="introduction__title--h1">CLAN-F<span class="introduction__title--dot"></span></h1></span>
-                    <div class="introduction__subtitles-container">
-                        <div class="introduction__subtitles desktop">
-                            <h2 class="subtitle">Inteligencia Artificial</h2>
-                            <h2 class="subtitle">Forjando Futuro</h2>
-                            <h2 class="subtitle">Tecnología</h2>
-                            <h2 class="subtitle">Innovación</h2>
-                            <h2 class="subtitle">Inteligencia Artificial</h2>
-                        </div>
-                        <div class="introduction__subtitles mobile">
-                            <h2 class="subtitle">Inteligencia</h2>
-                            <h2 class="subtitle">Artificial</h2>
-                            <h2 class="subtitle">Forjando</h2>
-                            <h2 class="subtitle">Futuro</h2>
-                            <h2 class="subtitle">Inteligencia</h2>
-                        </div>
-                    </div>
-                    <p class="introduction__paragraph">Descubre productos potenciados con Inteligencia Artificial para tu uso cotidiano con <span class="introduction__paragraph--name">Clan-F</span>, líderes en el mercado de IA para el hogar.</p>
-                </div>
-                <div class="introduction__button-container">
-                    <a href="#" class="introduction-btn">Descubre nuestros productos</button>
-                    <a href="quienes_somos.html" class="introduction-btn">Sobre nosotros</a>
+                    <img src="assets/logo/logo-transparente.png" alt="Logo completo de CLAN-F" class="about__logo_clan-f">  
                 </div>
             </div>
         </section>
-        <!-- ... Estructura aquí ... -->
+
+        <section class="somos-nosotros">
+            <h1 class="nos">Nosotros</h1>
+            <div class="about__logo-container">
+                <img src="assets/logo/icono-transparente.png" alt="Logo de CLAN-F" class="about__logo">
+            </div>
+            <!-- ============================================= -->
+            <!-- Misión y Visión -->
+            <!-- ============================================= -->
+            <div id="mi-vi" class="table-wrapper">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td id="mision">
+                                <img src="../assets/img/QS/moderna-creacion-adan.png" alt="Mano artificial y mano humana">
+                                <h3 class="mision">Misión:</h3>
+                                <p>Nuestra misión en <strong>CLAN-F</strong> es impulsar la innovación y la transformación digital a través de soluciones de inteligencia artificial de vanguardia. Trabajamos incansablemente para brindar tecnologías avanzadas que mejoren la eficiencia, la toma de decisiones y la calidad de vida de los hogares en Argentina. Nos esforzamos por ser líderes en el desarrollo de soluciones AI, éticas y responsables que beneficien a la sociedad.</p>
+                            </td>
+                            <td id="vision">
+                                <img src="../assets/img/QS/robot-humano.png" alt="Manos Robóticas">
+                                <h3 class="vision">Visión:</h3>
+                                <p >Nuestra visión en <strong>CLAN-F</strong> es ser la empresa lider en el campo de la AI, reconocida por nuestro compromiso con la excelencia, la ética y la sostenibilidad. Nos esforzamos por crear un futuro en el que la IA potencie la creatividad humana, resuelva los desafíos más complejos y promueva un mundo más equitativo. Trabajamos para construir un ecosistema AI colaborativo y diverso que inspire la innovación y el progreso continuo.</p>
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="grid-container historia">
+                
+            </div>
+
+        </section>
+
         
     </main>
 

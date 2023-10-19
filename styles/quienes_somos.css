@@ -90,6 +90,43 @@ h1, h3 {
     height: auto;
 }
 
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fefefe;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#historia h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    padding: 10px;
+}
+
+p {
+    color: #555;
+}
+
+#historia p {
+    text-align: justify;
+}
+
+.story-image {
+    width: calc(50% - (40px * 2));
+    float: left;
+    margin: 0 20px 20px 0;
+    border: 5px solid #f0f0f0;
+    transition: 500ms;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.story-image:hover {
+    opacity: 0.3;
+}
+
 
 .person-cards {
     display: flex;

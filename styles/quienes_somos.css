@@ -33,7 +33,6 @@
     object-fit: contain;
 }
 
-
 .somos-nosotros {
     background-color: snow;
     margin: 30px;
@@ -127,7 +126,6 @@ p {
     opacity: 0.3;
 }
 
-
 .person-cards {
     display: flex;
     flex-wrap: wrap;
@@ -178,7 +176,6 @@ img {
     font-size: 14px;
     margin: 5px 0;
 }
-
 
 @media (max-width: 768px) {
     #mi-vi {

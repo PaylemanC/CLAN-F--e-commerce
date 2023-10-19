@@ -86,7 +86,7 @@ h1, h3 {
 
 #mi-vi img {
     min-width: 200px;
-    max-width: 80%;
+    max-width: 60%;
     height: auto;
 }
 
@@ -117,9 +117,9 @@ img {
 }
 
 .highlight {
-    font-size: 24px;
+    font-size: 34px;
     font-weight: bold;
-    color: #007acc; /* Puedes cambiar el color a tu preferencia */
+    color: #79647c;
 }
 
 .social-icons {
@@ -137,7 +137,7 @@ img {
     margin: 10px 0;
 }
 
-hobbies, .soft-skills {
+.hobbies, .soft-skills {
     font-size: 14px;
     margin: 5px 0;
 }

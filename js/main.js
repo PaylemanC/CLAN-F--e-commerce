@@ -22,16 +22,18 @@ let reviewData = { name: '', photo: '', review: '' };
 function reviewCard() {
     const { name, photo, review } = reviewData;
     reviewCardContainer.innerHTML = `
-        <img src="${photo}" width="100px" class="">
-        <p>Nombre: ${name}</p>
-        <p>Reseña: ${review}</p>`;
+    <div class="review-card">
+        <img src="${photo}" alt="Foto de ${name}}" class="review-card__img">
+        <p class="review-card__description">"${review}."</p>
+        <p class="review-card__name">${name}</p>
+    </div>`;        
 }
 
 fetch(apiUsers) 
     .then(user => user.json())
     .then(user => {
         const name = `${user.results[0].name.first} ${user.results[0].name.last}`;
-        const photo = user.results[0].picture.medium;
+        const photo = user.results[0].picture.large;
         reviewData.name = name;
         reviewData.photo = photo;
         reviewCard();

@@ -1,7 +1,7 @@
 // ----------------------- DOM:
 const toggleMenuElement = document.getElementById('toggle-menu');
 const mainMenuElement = document.getElementById('main-menu');
-const reviewCardContainer = document.getElementById('review-card-container');
+const reviewsCardContainer = document.getElementById('reviews');
 
 
 // ----------------------------------------------------------------------
@@ -13,7 +13,7 @@ toggleMenuElement.addEventListener('click', () => {
 })
 
 
-// ----------------------- API:
+// ----------------------- API para reseñas:
 let apiUsers = "https://randomuser.me/api/"; 
 let apiReviews = "https://jsonplaceholder.typicode.com/posts";
 
@@ -21,13 +21,23 @@ let reviewData = { name: '', photo: '', review: '' };
 
 function reviewCard() {
     const { name, photo, review } = reviewData;
-    reviewCardContainer.innerHTML = `
-    <div class="review-card">
-        <img src="${photo}" alt="Foto de ${name}}" class="review-card__img">
+    const reviewCard = document.createElement('div');
+    reviewCard.classList.add('review-card');
+    const cardContent = `<img src="${photo}" alt="Foto de ${name}" class="review-card__img">
         <p class="review-card__description">"${review}."</p>
-        <p class="review-card__name">${name}</p>
-    </div>`;        
+        <p class="review-card__name">${name}</p>`
+
+    reviewCard.innerHTML = cardContent;
+    reviewsCardContainer.appendChild(reviewCard);
 }
+
+fetch(apiReviews) 
+    .then(review => review.json()) 
+    .then(review => {
+        randomReview = Math.floor(Math.random() * review.length);
+        reviewData.review = review[randomReview].body;
+    }) 
+    .catch(error => console.log("Ocurrió un error en la solicitud de reseñas: ", error));
 
 fetch(apiUsers) 
     .then(user => user.json())
@@ -39,12 +49,3 @@ fetch(apiUsers)
         reviewCard();
     })
     .catch(error => console.log("Ocurrió un error en la solicitud de usuarios: ", error));
-
-fetch(apiReviews) 
-    .then(review => review.json()) 
-    .then(review => {
-        randomReview = Math.floor(Math.random() * review.length);
-        reviewData.review = review[randomReview].body;
-        reviewCard();
-    }) 
-    .catch(error => console.log("Ocurrió un error en la solicitud de reseñas: ", error));

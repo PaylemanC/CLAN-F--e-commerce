@@ -17,6 +17,10 @@ p {
     line-height: 1.5;
 }
 
+button {
+    cursor: pointer;
+}
+
 /*  ----------- FIN DE RESETS -----------  */
 
 :root {
@@ -33,7 +37,6 @@ p {
 
     /* Fuentes: */
     --font-lato: 'Lato', sans-serif;
-    --title-pacifico: 'Pacifico', cursive;
     --title-playfair: 'Playfair Display', serif;
 }
 
@@ -150,6 +153,8 @@ p {
     background-size: 0% 2px;
     transition: background-size .3s;
     padding-bottom: 4px;
+    font-size: 1.6rem;
+    font-weight: normal;
 }
 .main-menu__link:hover, a.main-menu__link:focus {
     background-size: 100% 2px;

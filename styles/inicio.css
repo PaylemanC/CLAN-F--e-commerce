@@ -523,7 +523,7 @@
 }
 
 /* SEXTA SECCIÓN: RESEÑAS (CON API) */
-.reviews {
+#reviews {
     padding: 16px 0;
     background-color: #f3f3f3;
 }

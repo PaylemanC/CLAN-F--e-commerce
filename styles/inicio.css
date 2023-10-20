@@ -371,7 +371,7 @@
     transition: color .5s;
     z-index: 1;
     border-radius: 8px;
-    background-color: rgb(247, 247, 247);
+    background-color: #f5f5f5;
     color: var(--turquesa-opaco);
 }
 
@@ -525,7 +525,7 @@
 /* SEXTA SECCIÓN: RESEÑAS (CON API) */
 #reviews {
     padding: 16px 0;
-    background-color: #f3f3f3;
+    background-color: #f5f5f5;
 }
 
 .review-card {

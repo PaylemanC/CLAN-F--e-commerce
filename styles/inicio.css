@@ -253,8 +253,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px 40px;
-    opacity: 65%;
+    gap: 20px 60px;
+    opacity: 50%;
     margin: 35px 0;
     padding: 30px 0;
     border-top: 2px solid var(--gris-claro);
@@ -522,6 +522,38 @@
     padding: 8px 0;
 }
 
+/* SEXTA SECCIÓN: RESEÑAS (CON API) */
+.reviews {
+    padding: 16px 0;
+    background-color: #f3f3f3;
+}
+
+.review-card {
+    text-align: center;
+    margin: 16px;
+}
+
+.review-card__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.review-card__description {
+    font-family: var(--title-playfair);
+    font-size: 2rem;
+    font-style: italic;
+    margin: 12px 0;
+}
+.review-card__description::first-letter {
+    text-transform: uppercase;
+}
+
+.review-card__name {
+    color: var(--texto-secundario);
+    text-transform: capitalize;
+}
 
 
 @media screen and (max-width: 768px) {

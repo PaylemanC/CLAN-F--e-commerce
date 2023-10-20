@@ -17,8 +17,9 @@ toggleMenuElement.addEventListener('click', () => {
 let apiUsers = "https://randomuser.me/api/"; 
 let apiReviews = "https://jsonplaceholder.typicode.com/posts";
 
-let reviewData = { name: '', photo: '', review: '' };
+let reviewData = { name: '', photo: '', review: '' }; //Se almacena las reseñas y los usuarios aquí porque los datos provienen de dos APIs diferentes.
 
+//Crea la card con los datos que traigan las APIs y la agrega al DOM:
 function reviewCard() {
     const { name, photo, review } = reviewData;
     const reviewCard = document.createElement('div');
@@ -31,14 +32,16 @@ function reviewCard() {
     reviewsCardContainer.appendChild(reviewCard);
 }
 
+//Trae la reseña:
 fetch(apiReviews) 
     .then(review => review.json()) 
     .then(review => {
-        randomReview = Math.floor(Math.random() * review.length);
+        randomReview = Math.floor(Math.random() * review.length); //Trae 1 reseña aleatoria.
         reviewData.review = review[randomReview].body;
     }) 
     .catch(error => console.log("Ocurrió un error en la solicitud de reseñas: ", error));
 
+//Trae datos de la persona:
 fetch(apiUsers) 
     .then(user => user.json())
     .then(user => {
@@ -46,6 +49,6 @@ fetch(apiUsers)
         const photo = user.results[0].picture.large;
         reviewData.name = name;
         reviewData.photo = photo;
-        reviewCard();
+        reviewCard(); //Crea la card una vez obtenidos los datos de reviews y la persona. 
     })
     .catch(error => console.log("Ocurrió un error en la solicitud de usuarios: ", error));

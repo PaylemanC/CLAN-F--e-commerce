@@ -2,7 +2,7 @@
 
 **E-commerce de productos innovadores, tanto de línea personal como del hogar, con Inteligencia Artificial integrada.**
 
-![Logo](assets/logo/icono.png)
+<img src="assets/logo/icono.png" width="260px">
 
 Este es un proyecto Open Source desarrollado como proyecto de la primera etapa del curso de [Full Stack Python](https://agenciadeaprendizaje.bue.edu.ar/curso/fullstack-con-python-cac-4-0/) de [Codo a Codo](https://buenosaires.gob.ar/educacion/codocodo/el-programa). Consta de HTML, CSS y JS sin dependencias externas, basta con clonar el repositorio para tenerlo en marcha.
 

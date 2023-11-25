@@ -1,0 +1,40 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} CLAN-F {% endblock %}</title> <!-- Bloque opcional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    {% block styles %}{% endblock %} <!--EJ. <link rel="stylesheet" href="{% static 'css/inicio.css' %}">-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Playfair+Display:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="{% static 'images/fav.ico' %}" type="image/x-icon">
+    
+    <!-- Etiquetas meta para SEO y social media -->
+    <meta name="title" content="CLAN-F | Tienda electrónica de productos con IA"/>
+    <meta name="description" content="Bienvenido a CLAN-F, tu tienda electrónica de productos personales y de hogar potenciados con Inteligencia Artificial. Descubre la innovación y comodidad que la IA puede ofrecerte en tus actividades diarias." />
+    <meta name="keywords" content="CLAN-F, tienda electrónica, productos con Inteligencia Artificial, IA, innovación, tecnología avanzada, automatización del hogar" />
+    <meta name="description" content="Bienvenido a CLAN-F, tu tienda electrónica de productos personales y de hogar potenciados con Inteligencia Artificial. Descubre la innovación y comodidad que la IA puede ofrecerte en tus actividades diarias." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://paylemanc.github.io/CLAN-F--e-commerce/" />
+    <meta property="og:title" content="CLAN-F | Tienda electrónica de productos con IA" />
+    <meta property="og:description" content="Bienvenido a CLAN-F, tu tienda electrónica de productos personales y de hogar potenciados con Inteligencia Artificial. Descubre la innovación y comodidad que la IA puede ofrecerte en tus actividades diarias." />
+    <meta property="og:image" content="https://github.com/PaylemanC/CLAN-F--e-commerce/blob/main/assets/img/portada.png" />
+</head>
+<body>
+    {% include "components/nav.html" %}
+
+    <main>
+        {% block content %}
+              <!-- ... Estructura aquí ... -->
+        {% endblock content %}
+    </main>
+
+    {% include "components/footer.html" %}    
+
+    <script src="js/main.js"></script>
+</body>
+</html>

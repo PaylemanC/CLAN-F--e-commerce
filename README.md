@@ -1,9 +1,3 @@
----
-runme:
-  id: 01HG435HE618D8KH6V2TY9ZC2D
-  version: v2.0
----
-
 # CLAN-F--e-commerce
 
 **E-commerce de productos innovadores, tanto de línea personal como del hogar, con Inteligencia Artificial integrada.**

@@ -1,0 +1,197 @@
+.introduction {
+    background-color: var(--gris-oscuro);
+    padding: 60px 120px 50px;
+    position: relative;
+    display: grid;
+}
+
+.introduction-decoration {
+    position: absolute;
+    background: url('../assets/img/globo_trazado.png');
+    height: 250px;
+    width: 300px;
+    bottom: 0;
+    right: 0;
+}
+
+.introduction__content {
+    color: white;
+    position: relative;
+    z-index: 1;
+    display: grid;
+}
+
+.about__logo_clan-f {
+    width: 240px;
+    display: grid;
+    justify-self: center;
+}
+
+.somos-nosotros {
+    background-color: snow;
+    margin: 30px;
+    padding: 32px 16px;
+}
+
+.nos {
+    font-size: xx-large;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.mision, .vision {
+    margin: 20px 0 10px;
+}
+
+td {
+    border: 0 none;
+    text-align: center;
+    padding: 20px 50px;
+}
+
+h1, h3 {
+    text-transform: uppercase;
+}
+
+#mi-vi {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    column-gap: 50px;
+}
+
+#mision,
+#vision {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+#mi-vi img {
+    min-width: 200px;
+    max-width: 60%;
+    height: auto;
+    border: 8px double var(--turquesa-opaco);
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fefefe;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#historia h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    padding: 10px;
+}
+
+p {
+    color: #555;
+}
+
+#historia p {
+    text-align: justify;
+}
+
+.story-image {
+    width: calc(50% - (40px * 2));
+    float: left;
+    margin: 0 20px 20px 0;
+    border: 5px solid #f0f0f0;
+    transition: 500ms;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.story-image:hover {
+    opacity: 0.3;
+}
+
+.cada-uno {
+    margin-bottom: 30px;
+}
+
+.person-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.person-card {
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.person-card__img-container {
+    width: 250px;
+    height: 250px;
+    overflow: hidden; 
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.person-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.highlight {
+    font-size: 34px;
+    font-weight: bold;
+    color: #79647c;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0 0 10px 0;
+}
+
+.social-icons li {
+    display: inline;
+    font-size: 2.2rem;
+    margin: 0 24px;
+}
+
+.social-icons li i {
+    color: #292929;;
+}
+
+.social-icons li i:hover {
+    transform: scale(2);
+    transition: 1.5s;
+}
+
+
+.slogan {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.hobbies, .soft-skills {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    #mi-vi {
+        flex-direction: column;
+    }
+}

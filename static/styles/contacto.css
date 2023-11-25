@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: block;
+}
+.container {
+    width: 80%;   
+    padding: 45px;
+    left: 40%;    
+}
+
+
+.row {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.col-md-5::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    background-color: #0F4E5C;
+    border-radius: 10px;
+}
+
+.col-md-5 {
+    width: 38%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-image: url('../assets/logo/icono-t.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.col-md-7.c-lateral-derecho {
+    padding: 16px;
+}
+
+.form_contact, .form_contact input, .form_contact button, .form_contact textarea, .form_contact .alertSuccess {
+    font-size: 1.6rem;
+}
+
+.form_contact h4 {
+    font-size: 1.8rem;
+}
+
+.form-control {
+    height: 52px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    border-radius: 2px;
+    box-sizing: none ! important;
+    border: 1px solid black;
+}
+
+.user,
+.d-flex {
+    position: relative;
+    z-index: 2;
+    color: black;
+    display: flex;
+}
+.user {
+    font-size: 120px;
+    display: flex;
+    text-align: center;
+}
+.bi-geo-alt,
+.bi-telephone,
+.bi-envelope {
+    padding-left: 28px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.d-flex p {
+    font-size: 18px;
+    padding-left: 18px;
+    font-weight: 600;
+}
+
+.mapa {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button.hover {
+    background: #3371B6;
+}
+
+nav a:hover, footer a:hover {
+    color: currentColor;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.bi-telephone, .bi-envelope {
+    display: initial;
+    padding-left: 0;
+}
+
+.c-lateral-izquierdo div.d-flex {
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        top: 700px;
+        left: 50%;
+    }
+}

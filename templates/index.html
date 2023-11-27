@@ -1,8 +1,161 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block styles %}<link rel="stylesheet" href="{% static 'css/inicio.css' %}">{% endblock styles %}
+{% block styles %}<link rel="stylesheet" href="{% static 'styles/inicio.css' %}">{% endblock styles %}
 
 {% block content %}
-    <h1>Hola mundo</h1>
+    <!-- Primera sección Introducción: -->
+    <section class="introduction">
+        <div class="introduction-decoration"></div>
+        <div class="introduction-container">
+            <div class="introduction__content">
+                <h1 class="introduction__title--h1">{{ title }}<span class="introduction__title--dot"></span></h1></span>
+                <div class="introduction__subtitles-container">
+                    <div class="introduction__subtitles desktop">
+                        <h2 class="subtitle">Inteligencia Artificial</h2>
+                        <h2 class="subtitle">Forjando Futuro</h2>
+                        <h2 class="subtitle">Tecnología</h2>
+                        <h2 class="subtitle">Innovación</h2>
+                        <h2 class="subtitle">Inteligencia Artificial</h2>
+                    </div>
+                    <div class="introduction__subtitles mobile">
+                        <h2 class="subtitle">Inteligencia</h2>
+                        <h2 class="subtitle">Artificial</h2>
+                        <h2 class="subtitle">Forjando</h2>
+                        <h2 class="subtitle">Futuro</h2>
+                        <h2 class="subtitle">Inteligencia</h2>
+                    </div>
+                </div>
+                <p class="introduction__paragraph">Descubre productos potenciados con Inteligencia Artificial para tu uso cotidiano con <span class="introduction__paragraph--name">Clan-F</span>, líderes en el mercado de IA para el hogar.</p>
+            </div>
+            <div class="introduction__button-container">
+                <a href="lista_productos.html" class="introduction-btn button__animation-content">Descubre nuestros productos</button>
+                <a href="quienes_somos.html" class="introduction-btn button__animation-content">Sobre nosotros</a>
+            </div>
+        </div>
+    </section>
+    <div class="scrolling-container">
+        <div class="mouse-container">
+            <div class="scroll">
+                <div class="mouse"></div>
+            </div>
+        </div>
+        <p class="scrolling-caption">Desliza hacia abajo</p>  
+    </div>        
+    <!-- Segunda sección Contexto del e-commerce y landing page: -->
+    <section class="about">
+        <div class="about__logo-container">
+            <img src="{% static 'images/logo/icono-transparente.png' %}" alt="Logo de CLAN-F" class="about__logo">
+        </div>
+        <p class="about__description">Somos una tienda electrónica de productos personales y de hogar potenciados con Inteligencia Artificial. En CLAN-F, estamos comprometidos en ofrecerte una experiencia de vida más inteligente y conveniente, con productos de alta calidad y  de última generación diseñados para mejorar tu hogar y vida cotidiana de formas que quizás nunca imaginaste.</p>
+        <div class="about__sponsors">
+            <img src="{% static 'images/icons/microsoft.png' %}" alt="Logo empresa Microsoft" class="about__sponsor microsoft"></img>
+            <img src="{% static 'images/icons/amazon.png' %}" alt="Logo empresa Amazon" class="about__sponsor amazon"></img>
+            <img src="{% static 'images/icons/apple.png' %}" alt="Logo empresa Apple" class="about__sponsor apple"></img>
+            <img src="{% static 'images/icons/google.png' %}" alt="Logo empresa Google" class="about__sponsor google"></img>
+        </div>
+    </section>
+    <!-- Tercera sección Grilla de productos destacados: -->
+    <section class="featured-products">
+        <div class="f-product f-product--big">
+            <p class="f-product__caption">Descubre IA de vanguardia</p>
+            <span class="f-product__link-container">
+                <a href="lista_productos.html" class="f-product__link button__animation-content">Ver más</a>
+            </span>
+            <div class="f-product--image"></div>
+        </div>
+        <div class="f-product f-product--square aspiradora">
+            <p class="f-product__caption">Aspiradora Conga 7090</p>
+            <p class="f-product__price">$140.000</p>
+            <div class="f-product__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                    <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="f-product f-product--square termostato">
+            <p class="f-product__caption">Nest Learning Termostato</p>
+            <p class="f-product__price">$90.000</p>
+            <div class="f-product__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                    <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="f-product f-product--long">
+            <p class="f-product__caption">Lo mejor en asistentes de voz</p>
+            <a href="lista_productos.html" class="f-product__link button__animation-content">Ver más</a>
+        </div>
+    </section>
+    <!-- Cuarta sección Cards con información relevante sobre las compra: -->
+    <section class="purchase-info">
+        <div class="purchase-info-card">
+            <div class="purchase-info-card__icon-container">
+                <img src="{% static 'images/icons/pago.svg' %}" alt="Icono de medios de pago" class="purchase-info-card__icon">
+            </div>
+            <div class="purchase-info-card__content-container">
+                <p class="purchase-info-card__title">Aceptamos todos los medios de pago</p>
+                <p class="purchase-info-card__description"> Aceptamos tarjetas de crédito y débito, MercadoPago, PayPal y transferencias bancarias.</p>
+            </div>
+        </div>
+        <div class="purchase-info-card">
+            <div class="purchase-info-card__icon-container">
+                <img src="{% static 'images/icons/envios.svg' %}" alt="Icono de envíos a todo el país" class="purchase-info-card__icon">
+            </div>
+            <div class="purchase-info-card__content-container">
+                <p class="purchase-info-card__title">Envíos a todo el país</p>
+                <p class="purchase-info-card__description"> Con MercadoEnvíos y Andreani tu compra llega a la puerta de tu casa.</p>
+            </div>
+        </div>
+        <div class="purchase-info-card">
+            <div class="purchase-info-card__icon-container">
+                <img src="{% static 'images/icons/seguro.svg' %}" alt="Icono de entrega" class="purchase-info-card__icon">
+            </div>
+            <div class="purchase-info-card__content-container">
+                <p class="purchase-info-card__title">Compra segura y protegida</p>
+                <p class="purchase-info-card__description"> Utilizamos encriptación de vanguardia para proteger tus datos personales y financieros en cada transacción.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Quinta sección Beneficios de incorporar IA en la vida cotidiana -->
+    <section class="benefits">
+        <div class="benefits-content">
+                <h3 class="benefits__title">¿Por qué deberías incorporar IA en tu vida cotidiana?</h3>
+                <div class="benefit-item">
+                    <div class="benefit-item__title-container">
+                        <span class="benefit-item__icon automation"></span>
+                        <p class="benefit-item__title">Automatización de tareas</p>
+                    </div>
+                    <p class="benefit-item__description">Puedes automatizar tus tareas diarias o repetitivas para liberar tiempo y concentrarte en actividades más importantes o disfrutar de tu tiempo libre.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-item__title-container">
+                        <span class="benefit-item__icon energy"></span>
+                        <p class="benefit-item__title">Ahorro de energía</p>
+                    </div>
+                    <p class="benefit-item__description">Nuestros dispositivos inteligentes son eficientes energéticamente, lo que te permite reducir tu consumo eléctrico y ahorrar en tus facturas de servicios. Además, puedes controlarlos fácilmente desde tu teléfono para asegurarte de que no se queden encendidos innecesariamente.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-item__title-container">
+                        <span class="benefit-item__icon learning"></span>
+                        <p class="benefit-item__title">Aprendizaje personalizado</p>
+                    </div>
+                    <p class="benefit-item__description">Estos productos aprenden de tus hábitos y preferencias para adaptarse y ofrecer experiencias más personalizadas al usuario con el paso del tiempo. Cuanto más los usas, más inteligentes se vuelven.</p>
+                </div>
+        </div>
+        <div class="benefits-image"></div> 
+        <div class="benefits-video">
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/Cx5aNwnZYDc?si=LJIgPst6iwEte0Dt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- Sexta sección Reseñas (con API)-->
+    <section id="reviews">
+        <!-- Review estática (para ver comparación con API): -->
+        <div class="review-card">
+            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Foto de reviewer" class="review-card__img">
+            <p class="review-card__description">"Excelente atención y productos de calidad. Muy recomendable."</p>
+            <p class="review-card__name">Mariana Pérez</p>
+        </div>
+        <!-- Review dinámica (API): insertada desde JS -->
+    </section>
 {% endblock content %}

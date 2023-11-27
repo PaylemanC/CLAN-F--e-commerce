@@ -7,7 +7,7 @@
 
 .introduction-decoration {
     position: absolute;
-    background: url('../assets/img/globo.png');
+    background: url('../images/globo.png');
     height: 280px;
     width: 280px;
     bottom: 0;
@@ -305,13 +305,13 @@
 
 .f-product--long {
     grid-area: 2 / 3 / 3 / 5;
-    background: url('../assets/img/grid-asistentes.png') no-repeat bottom / contain;
+    background: url('../images/grid-asistentes.png') no-repeat bottom / contain;
     background-color: #e1e1e1;
 }
 
 .f-product--big .f-product--image {
     position: absolute;
-    background: url('../assets/img/grid-camara.png') no-repeat center / contain;
+    background: url('../images/grid-camara.png') no-repeat center / contain;
     width: 75%;
     height: 75%;
     bottom: -60px;
@@ -319,12 +319,12 @@
 }
 
 .f-product--square.aspiradora {
-    background: url('../assets/img/grid-aspiradora.png') no-repeat bottom / contain;
+    background: url('../images/grid-aspiradora.png') no-repeat bottom / contain;
     background-color: grey;
 }
 
 .f-product--square.termostato {
-    background: url('../assets/img/grid-termostato.jpg') no-repeat bottom / contain;
+    background: url('../images/grid-termostato.jpg') no-repeat bottom / contain;
     background-color: #9ea3a7;
 }
 
@@ -471,7 +471,7 @@
     grid-row-start: 1;
     grid-column-start: 2;
     grid-row-end: 2;
-    background: url('../assets/img/chip-ia.jpg') no-repeat left;
+    background: url('../images/chip-ia.jpg') no-repeat left;
 }  
  
 .benefits-video { 
@@ -504,13 +504,13 @@
 }
 
 .benefit-item__icon.automation {
-    background-image: url('../assets/icons/automatizacion.svg');
+    background-image: url('../images/icons/automatizacion.svg');
 }
 .benefit-item__icon.energy {
-    background-image: url('../assets/icons/energia.svg');
+    background-image: url('../images/icons/energia.svg');
 }
 .benefit-item__icon.learning {
-    background-image: url('../assets/icons/aprendizaje.svg');
+    background-image: url('../images/icons/aprendizaje.svg');
 }
 
 .benefit-item__title {
@@ -585,7 +585,7 @@
 
     .f-product--big {
         grid-area: 1 / 1 / 2 / 3;
-        background: url('../assets/img/grid-camara.png') no-repeat right bottom / 50%;
+        background: url('../images/grid-camara.png') no-repeat right bottom / 50%;
         background-color: #80b3b1;
         background-blend-mode: multiply;
     }

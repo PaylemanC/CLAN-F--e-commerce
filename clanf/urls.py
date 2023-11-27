@@ -1,3 +1,5 @@
+#URL.py donde se va a renderizar.
+
 """
 URL configuration for clanf project.
 
@@ -20,5 +22,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name = 'index'),
+    path('quienes_somos/', views.quienes_somos, name = 'quienes_somos'), #La URL, la función definida en view, el nombre de la página es opcional.
     path('admin/', admin.site.urls),
 ]

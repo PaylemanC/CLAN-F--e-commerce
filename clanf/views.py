@@ -8,3 +8,6 @@ def index(request):
 
 def quienes_somos(request):
     return render(request, 'quienes_somos.html', {}) #Recibe tres parámetros: petición de tipo, el archivo a renderizar, y el contexto)
+
+def contacto(request):
+    return render(request, 'contacto.html', {})

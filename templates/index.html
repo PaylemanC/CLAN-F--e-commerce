@@ -26,7 +26,7 @@
                         <h2 class="subtitle">Inteligencia</h2>
                     </div>
                 </div>
-                <p class="introduction__paragraph">Descubre productos potenciados con Inteligencia Artificial para tu uso cotidiano con <span class="introduction__paragraph--name">Clan-F</span>, líderes en el mercado de IA para el hogar.</p>
+                <p class="introduction__paragraph">Descubre productos potenciados con Inteligencia Artificial para tu uso cotidiano con <span class="introduction__paragraph--name">{{ title }}</span>, líderes en el mercado de IA para el hogar.</p>
             </div>
             <div class="introduction__button-container">
                 <a href="lista_productos.html" class="introduction-btn button__animation-content">Descubre nuestros productos</button>
@@ -45,9 +45,9 @@
     <!-- Segunda sección Contexto del e-commerce y landing page: -->
     <section class="about">
         <div class="about__logo-container">
-            <img src="{% static 'images/logo/icono-transparente.png' %}" alt="Logo de CLAN-F" class="about__logo">
+            <img src="{% static 'images/logo/icono-transparente.png' %}" alt="Logo de {{ title }}" class="about__logo">
         </div>
-        <p class="about__description">Somos una tienda electrónica de productos personales y de hogar potenciados con Inteligencia Artificial. En CLAN-F, estamos comprometidos en ofrecerte una experiencia de vida más inteligente y conveniente, con productos de alta calidad y  de última generación diseñados para mejorar tu hogar y vida cotidiana de formas que quizás nunca imaginaste.</p>
+        <p class="about__description">Somos una tienda electrónica de productos personales y de hogar potenciados con Inteligencia Artificial. En {{ title }}, estamos comprometidos en ofrecerte una experiencia de vida más inteligente y conveniente, con productos de alta calidad y  de última generación diseñados para mejorar tu hogar y vida cotidiana de formas que quizás nunca imaginaste.</p>
         <div class="about__sponsors">
             <img src="{% static 'images/icons/microsoft.png' %}" alt="Logo empresa Microsoft" class="about__sponsor microsoft"></img>
             <img src="{% static 'images/icons/amazon.png' %}" alt="Logo empresa Amazon" class="about__sponsor amazon"></img>

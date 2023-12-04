@@ -8,6 +8,7 @@ db.sqlite3
 env/
 venv/
 local.py
+products_images
 
 ### Linux ###
 *~

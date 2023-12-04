@@ -3,7 +3,7 @@ from . import models
 
 # Register your models here.
 class ProductAdmin(admin.ModelAdmin):
-    fields = ('title', 'price', 'stock')
+    fields = ('title', 'price', 'stock', 'image')
     list_display = ['id', '__str__', 'price', 'stock', 'created_at']
 
 admin.site.register(models.Product, ProductAdmin)

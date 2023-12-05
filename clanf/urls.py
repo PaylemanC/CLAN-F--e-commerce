@@ -25,6 +25,7 @@ urlpatterns = [
     path('quienes-somos', views.quienes_somos, name = 'quienes_somos'), #La URL, la función definida en view = de view traeme ESO, el nombre de la página es opcional.
     path('contacto', views.contacto, name = 'contacto'),
     path('productos', views.lista_productos, name = 'lista_productos'),
+    path('login', views.login_view, name = 'login'),
     # Se incluyen todas las URLs de la app productos mediante el prefijo administrador/
     path('administrador/', include('productos.urls')),
     path('admin/', admin.site.urls),

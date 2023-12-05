@@ -7,6 +7,10 @@
 <h2>Inicia Sesión</h2>
 <form method="post">
     {% csrf_token %}
-    {{ form }}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Iniciar Sesión</button>
+    </form>
 </form>
 {% endblock %}

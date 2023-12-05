@@ -7,9 +7,11 @@ def index(request):
         'title': 'CLAN-F'
     })
 
-
 def quienes_somos(request):
     return render(request, 'quienes_somos.html', {}) #Recibe tres parámetros: petición de tipo, el archivo a renderizar, y el contexto)
 
 def contacto(request):
     return render(request, 'contacto.html', {})
+
+def administrador(request):
+    return render(request, 'administrador.html', {})

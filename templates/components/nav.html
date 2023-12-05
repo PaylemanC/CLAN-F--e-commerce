@@ -24,17 +24,26 @@
             <div class="main-menu__links-container">
                 <ul class="main-menu__links">
                     <li class="main-menu__item">
-                        <a href="{% url 'inicio' %}" class="main-menu__link">Inicio</a>
+                        <a href="{% url 'inicio' %}" class="main-menu__link">INICIO</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="{% url 'quienes_somos' %}" class="main-menu__link">Quienes somos</a>
+                        <a href="{% url 'quienes_somos' %}" class="main-menu__link">QUIÉNES SOMOS</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="{% url 'lista_productos' %}" class="main-menu__link">Productos</a>
+                        <a href="{% url 'lista_productos' %}" class="main-menu__link">PRODUCTOS</a>
                     </li>
                     <li class="main-menu__item">
-                        <a href="{% url 'contacto' %}" class="main-menu__link">Contacto</a>
+                        <a href="{% url 'contacto' %}" class="main-menu__link">CONTÁCTANOS</a>
                     </li>
+                    {% if user.is_authenticated %}
+                        <li class="main-menu__item">
+                            <a href="{% url 'logout' %}" class="main-menu__link">Cerrar sesión</a>
+                        </li>
+                    {% else %}
+                        <li class="main-menu__item">
+                            <a href="{% url 'login' %}" class="main-menu__link">Iniciar Sesión</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

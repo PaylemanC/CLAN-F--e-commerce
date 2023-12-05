@@ -1,7 +1,7 @@
 # views.py ==> Tener todas la funciones o clases para renderizar las vistas de una aplicación, es decir, mostrar los HTML.
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm
 
 def index(request):
@@ -43,3 +43,8 @@ def login_view(request):
     return render(request, 'login.html', {
         'form': form
     })  
+    
+def logout_view(request):
+    logout(request)
+    print(request, 'Sesión cerrada exitosamente.')
+    return redirect('login')

@@ -93,8 +93,7 @@ button {
 
 .main-menu__links-container {
     text-align: center;
-    position: relative;
-    
+    position: relative;    
 }
 
 .main-menu--show {
@@ -149,7 +148,6 @@ ul {
 
 .main-menu__link {
     color: #222831;
-    text-transform: uppercase;
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0% 100%;

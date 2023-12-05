@@ -26,6 +26,7 @@ urlpatterns = [
     path('contacto', views.contacto, name = 'contacto'),
     path('productos', views.lista_productos, name = 'lista_productos'),
     path('login', views.login_view, name = 'login'),
+    path('logout', views.logout_view, name='logout'),
     # Se incluyen todas las URLs de la app productos mediante el prefijo administrador/
     path('administrador/', include('productos.urls')),
     path('admin/', admin.site.urls),

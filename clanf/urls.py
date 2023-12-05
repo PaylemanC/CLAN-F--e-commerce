@@ -21,7 +21,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.index, name = 'index'),
+    path('', views.index, name = 'inicio'),
     path('quienes-somos', views.quienes_somos, name = 'quienes_somos'), #La URL, la función definida en view = de view traeme ESO, el nombre de la página es opcional.
     path('contacto', views.contacto, name = 'contacto'),
     path('productos', views.lista_productos, name = 'lista_productos'),

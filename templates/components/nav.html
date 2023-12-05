@@ -17,24 +17,26 @@
     
         <input type="checkbox" class="toggle-menu__checkbox" id="toggle-menu-checkbox" />
     
-        <ul id="main-menu" class="main-menu">
+        <div id="main-menu" class="main-menu">
             <div class="logo">
-                <a href="index.html"><img src="{% static 'images/logo/icono.png' %}" alt="Logo de CLAN-F" class="logo-img"></a>
+                <a href="{% url 'inicio' %}"><img src="{% static 'images/logo/icono.png' %}" alt="Logo de CLAN-F" class="logo-img"></a>
             </div>
             <div class="main-menu__links-container">
-                <li class="main-menu__item">
-                    <a href="index.html" class="main-menu__link">Inicio</a>
-                </li>
-                <li class="main-menu__item">
-                    <a href="quienes_somos.html" class="main-menu__link">Quienes somos</a>
-                </li>
-                <li class="main-menu__item">
-                    <a href="lista_productos.html" class="main-menu__link">Productos</a>
-                </li>
-                <li class="main-menu__item">
-                    <a href="contacto.html" class="main-menu__link">Contacto</a>
-                </li>
+                <ul class="main-menu__links">
+                    <li class="main-menu__item">
+                        <a href="{% url 'inicio' %}" class="main-menu__link">Inicio</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="{% url 'quienes_somos' %}" class="main-menu__link">Quienes somos</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="{% url 'lista_productos' %}" class="main-menu__link">Productos</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a href="{% url 'contacto' %}" class="main-menu__link">Contacto</a>
+                    </li>
+                </ul>
             </div>
-        </ul>
+        </div>
     </nav>
 </header>

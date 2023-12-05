@@ -118,6 +118,10 @@ button {
     border: none;
 }
 
+ul {
+    list-style: none;
+}
+
 @media screen and (min-width: 768px) {
     .main-menu {
         display: flex;
@@ -127,7 +131,7 @@ button {
         transform: translateY(0);
     }
 
-    .main-menu__links-container {
+    #main-menu .main-menu__links-container .main-menu__links {
         display: flex;
         gap: 8px;
         flex-direction: row;

@@ -23,7 +23,7 @@
     <h1 class="title">Productos</h1>
     <button class="btnDefault newBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Nuevo producto</button>
   </div>
-  <div class="products">{% include "components/product-admin.html" %}</div>
+  <div class="products">{% include "components/product-admin.html" %}</div>  
 </section>
 
         
@@ -35,23 +35,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form method="POST" id="formulario" enctype="multipart/form-data">
-          <div class="modal-content">
-            <div class="modal-body"></div>
-            
-            <label for="nombre">Ingrese el nombre</label>
-            <input type="text" name="nombre" id="nombre" class="form-control" />
-            <br />
 
-            <label for="precio">Precio</label>
-            <input type="text" name="precio" id="precio" class="form-control" />
-            <br />
+        <form method='POST'>
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Guardar</button>
+        </form>
 
-            <label for="imagen">Ingrese una imagen</label>
-            <input type="file" name="imagen" id="imagen" class="form-control" />
-            <span id="imagen-subida"></span>
-            <br />
-            </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

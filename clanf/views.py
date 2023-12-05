@@ -13,5 +13,8 @@ def quienes_somos(request):
 def contacto(request):
     return render(request, 'contacto.html', {})
 
+def lista_productos(request):
+    return render(request, 'productos.html', {})
+
 def administrador(request):
     return render(request, 'administrador.html', {})

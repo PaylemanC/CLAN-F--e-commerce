@@ -37,11 +37,14 @@
                     </li>
                     {% if user.is_authenticated %}
                         <li class="main-menu__item">
-                            <a href="{% url 'logout' %}" class="main-menu__link">Cerrar sesión</a>
+                            <a href="{% url 'productos-admin' %}" class="main-menu__link link-authentication">Tus Productos</a>
+                        </li>
+                        <li class="main-menu__item">
+                            <a href="{% url 'logout' %}" class="main-menu__link link-authentication">Cerrar sesión</a>
                         </li>
                     {% else %}
                         <li class="main-menu__item">
-                            <a href="{% url 'login' %}" class="main-menu__link">Iniciar Sesión</a>
+                            <a href="{% url 'login' %}" class="main-menu__link link-authentication">Iniciar Sesión</a>
                         </li>
                     {% endif %}
                 </ul>

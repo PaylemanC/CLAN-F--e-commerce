@@ -96,6 +96,10 @@ button {
     position: relative;    
 }
 
+.main-menu__link.link-authentication {
+    font-style: italic;
+}
+
 .main-menu--show {
     display: flex;
     flex-direction: column;

@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import ProductForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required(login_url='/login')
 def crear_producto(request):
     form = ProductForm(request.POST or None)
     if request.method == 'POST': 

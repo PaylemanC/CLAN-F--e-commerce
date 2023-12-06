@@ -1,12 +1,12 @@
 {% load static %}
 <div class="product-card">
     <div class="product-card__img-container">
-        <img src="assets/img/productos/trapeadora.jpg" alt="Producto con IA" class="product-card__img"> <!-- Imágenes insertar desde ruta assets/img/productos/ -->
+        <img src="{{ product.image.url }}" alt="{{ product.title }}" class="product-card__img"> <!-- Imágenes insertar desde ruta assets/img/productos/ -->
     </div>
     <div class="product-card__info-container">
-        <h3 class="product-card__title">Aspiradora Trapeadora Robot Atma</h3>
+        <h3 class="product-card__title"> {{ product.title }} </h3>
         <div class="product-card__purchase">
-            <p class="product-card__price">$ 198.599</p>
+            <p class="product-card__price">$ {{ product.price }}</p>
             <button class="product-card__cart-button"></button>
         </div>
     </div>

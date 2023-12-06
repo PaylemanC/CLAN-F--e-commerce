@@ -9,7 +9,9 @@
 </section> -->
 
 <section class="products-container">
-    {% include "components/product-card.html" %}
+    {% for product in products %}
+        {% include "components/product-card.html" with product=product %}
+    {% endfor %}
 </section>
 
 {% endblock content %} <!-- Hay que cerrar el bloque, si hay varios hay que especificar cuál se está cerrando -->

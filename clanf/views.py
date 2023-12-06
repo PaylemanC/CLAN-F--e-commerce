@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm
+from productos.models import Product
 
 def index(request):
     return render(request, 'index.html', {
@@ -16,7 +17,11 @@ def contacto(request):
     return render(request, 'contacto.html', {})
 
 def lista_productos(request):
-    return render(request, 'productos.html', {})
+    products = Product.objects.all()
+    print(products)
+    return render(request, 'productos.html', {
+        'products': products
+    })
 
 def login_view(request):
     if request.user.is_authenticated:

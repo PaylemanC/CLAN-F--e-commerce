@@ -39,13 +39,13 @@
         <form method='POST'>
             {% csrf_token %}
             {{ form }}
-            <button type="submit">Guardar</button>
+            
         </form>
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Agregar</button>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-outline-info btn-lg" for="btncheck1" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-outline-info btn-lg" for="btncheck1">Agregar</button>
       </div>
     </div>
   </div>

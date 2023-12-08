@@ -7,7 +7,7 @@ from productos.models import Product
 # Create your views here.
 @login_required(login_url='/login')
 def listar_productos(request):
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('-id')
     print(products)
     return render(request, 'administrador.html', {
         'products': products

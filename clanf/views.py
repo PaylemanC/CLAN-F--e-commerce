@@ -18,7 +18,7 @@ def contacto(request):
     return render(request, 'contacto.html', {})
 
 def lista_productos(request):
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('-id')
     print(products)
     return render(request, 'productos.html', {
         'products': products

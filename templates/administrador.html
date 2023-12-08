@@ -28,8 +28,9 @@
   </div>
   <div class="products">
     {% for product in products %}
-      {% include "components/product-admin.html" with product=product %}</div>
+      {% include "components/product-admin.html" with product=product %}
     {% endfor%} 
+  </div>
 </section>
         
 <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -23,7 +23,10 @@
     <h1 class="title">Productos</h1>
     <button class="btnDefault newBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Nuevo producto</button>
   </div>
-  <div class="products">{% include "components/product-admin.html" %}</div>  
+  <div class="products">
+    {% for product in products %}
+      {% include "components/product-admin.html" with product=product %}</div>
+    {% endfor%} 
 </section>
 
         

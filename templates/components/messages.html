@@ -1,0 +1,8 @@
+{% if messages %}
+    {% for message in messages %}
+        <p class="message 
+            {% if message.tags == 'error' %} error {% elif message.tags == 'info' %} info {% else %} success {% endif %}"> 
+            {{ message }}
+        </p>
+    {% endfor %}
+{% endif %} 

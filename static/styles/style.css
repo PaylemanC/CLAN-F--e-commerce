@@ -168,6 +168,29 @@ ul {
 
 /*---------------- FIN NAV ----------------*/
 
+.message.info, .message.error {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.message.info {
+    color: #144e51;
+    background-color: #d4e6f3;
+}
+
+.message.success {
+    color: white;
+    background-color: var(--relieve);    
+    font-size: 2rem;
+    padding: 16px 20px;
+}
+
+.message.error {
+    color: #842029;
+    background-color: #f8d7da;
+}
+
 /* -------------- FOOTER ------------------*/
 
 .footer {

@@ -16,8 +16,11 @@
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
 />
 <link rel="stylesheet" href="{% static 'styles/administrador.css' %}" />
-{% endblock styles %} {% block content %}
+{% endblock styles %} 
 
+
+{% block content %}
+{% include "components/messages.html" %}
 <section class="administrador">
   <div class="intro">
     <h1 class="title">Productos</h1>
@@ -28,7 +31,6 @@
       {% include "components/product-admin.html" with product=product %}</div>
     {% endfor%} 
 </section>
-
         
 <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
@@ -38,13 +40,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
         <form method='POST'>
             {% csrf_token %}
             {{ form }}
-            
         </form>
-
       </div>
       <div class="modal-footer mx-auto">
         <button type="button" class="btn btn-outline-info btn-lg" for="btncheck1" data-bs-dismiss="modal">Cancelar</button>
@@ -53,4 +52,5 @@
     </div>
   </div>
 </div>
+
 {% endblock content %}

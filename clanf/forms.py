@@ -2,15 +2,13 @@
 from django import forms
 
 class LoginForm(forms.Form):
-    username = forms.CharField(label='Nombre de Usuario', required=True, min_length=4, max_length=24,
+    username = forms.CharField(label='Usuario', required=True,
                                widget=forms.TextInput(attrs={ 
-                                   'class': '',
                                    'id': 'username',
-                                   'placeholder': 'Nombre de Usuario'
+                                   'placeholder': 'Ingresa tu usuario'
                                 }))
-    password = forms.CharField(label='Contraseña', required=True, min_length=4, max_length=16,
+    password = forms.CharField(label='Contraseña', required=True, 
                                widget=forms.PasswordInput(attrs={ 
-                                'class': '',
                                 'id': 'password',
-                                'placeholder': '*******'
+                                'placeholder': 'Ingresa tu contraseña'
                             }))

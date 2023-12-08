@@ -2,6 +2,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 from .forms import LoginForm
 from productos.models import Product
 
@@ -38,10 +39,10 @@ def login_view(request):
             
             if user:
                 login(request, user)
-                print(request, 'Bienvenido {}'.format(user.username.upper()))
+                messages.success(request, 'Bienvenid@ {}'.format(user.username.upper()))
                 return redirect('productos-admin')
             else:
-                print(request, 'Usuario o contraseña incorrectos.')
+                messages.error(request, 'Usuario y/o contraseña incorrectos.')
     else:
         form = LoginForm()     
         
@@ -51,5 +52,5 @@ def login_view(request):
     
 def logout_view(request):
     logout(request)
-    print(request, 'Sesión cerrada exitosamente.')
+    messages.info(request, 'Sesión cerrada exitosamente.')    
     return redirect('login')

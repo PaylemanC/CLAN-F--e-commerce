@@ -8,6 +8,8 @@
 <form method="POST">
     {% csrf_token %}
     {{ form }}
-    <button type="submit">Iniciar Sesión</button>
+    <button type="submit" class="button__animation-content f-product__link">Iniciar Sesión</button>
+    {% include "components/messages.html" %}
 </form>
+<p class="advice">*Portal de acceso exclusivo para empleados.</p>
 {% endblock %}

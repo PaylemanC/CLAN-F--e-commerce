@@ -4,23 +4,32 @@ from .models import Product
 class ProductForm(forms.ModelForm):
     class Meta: 
         model = Product
-        fields = ['title', 'price', 'stock']
+        fields = ['title', 'price', 'stock', 'image']
     
     title = forms.CharField(label='Producto', min_length=1, max_length=30,
         widget=forms.TextInput(attrs={
-            'placeholder': 'Nombre del Producto',
+            'placeholder': 'Nombre del producto',
             'class': "form-control",
         })
     )
-    price = forms.CharField(label='Precio', min_length=1, max_length=8,
-        widget=forms.TextInput(attrs={
-            'placeholder': 'Indique un Precio',
+    
+    price = forms.DecimalField(required=True, label='Precio', max_digits=8, decimal_places=2,
+        widget=forms.NumberInput(attrs={
+            'placeholder': 'Indique un precio',
             'class': "form-control",
         })
     )
-    stock = forms.CharField(label='Stock', min_length=0, max_length=5,
-        widget=forms.TextInput(attrs={
-            'placeholder': 'Indique la Cantidad',
+    
+    stock = forms.IntegerField(label='Stock', 
+        widget=forms.NumberInput(attrs={
+            'placeholder': 'Indique la cantidad',
             'class': "form-control",
         })
     )
+    
+    image = forms.ImageField(required=True, label='Imagen',
+        widget=forms.ClearableFileInput(attrs={ 
+            'class': 'form-control',
+            'id': 'photo',
+            'accept': 'image/*'
+        }))

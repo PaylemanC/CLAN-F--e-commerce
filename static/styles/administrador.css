@@ -88,6 +88,29 @@
     background: #cb2121;
     box-shadow: 1px 1px 8px #c3c3c3;
 } 
+
+.modal-content {
+    padding: 8px;
+}
+
+.modal-title {
+    font-size: 2rem;
+}
+
+label {
+    color: var(--relieve);
+    font-size: 1.5rem;
+}
+
+input.form-control {
+    font-size: 1.6rem;
+    margin: 8px 0;
+}
+
+button.btn-lg {
+    font-size: 1.6rem;
+}
+
 @media screen and (max-width: 768px) {
     .product-card {
         justify-content: center;

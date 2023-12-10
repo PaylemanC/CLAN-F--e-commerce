@@ -12,6 +12,6 @@
     </div>
     <div class="product-buttons">
         <button class="btnDefault editBtn" type="button">Editar</button>
-        <button class="btnDefault deleteBtn" type="button">Eliminar</button>
+        <a href="{% url 'eliminar_producto' id=product.id %}" class="btnDefault deleteBtn" type="button">Eliminar</a>
     </div>
 </div>

@@ -14,11 +14,17 @@
 }
 
 .btnDefault { 
+    text-align: center;
+    text-decoration: none;
     padding: 12px 16px;
     border-radius: 8px;
     font-size: 1.6rem;
     min-width: 100px;    
     border: none;
+    color: white;
+}
+
+.btnDefault:hover{
     color: white;
 }
 

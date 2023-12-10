@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
 from productos.models import Product
+
 
 # Create your views here.
 @login_required(login_url='/login')
@@ -21,3 +22,12 @@ def crear_producto(request):
         'form': form,
         'products': products
     })
+    
+@login_required(login_url='/login')
+def eliminar_producto(request, id):
+    product = get_object_or_404(Product, id = id)
+    product.delete()
+    return redirect("productos-admin")
+
+
+    

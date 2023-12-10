@@ -26,11 +26,16 @@
     <h1 class="title">Productos</h1>
     <button class="btnDefault newBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Nuevo producto</button>
   </div>
-  <div class="products">
-    {% for product in products %}
-      {% include "components/product-admin.html" with product=product %}
-    {% endfor%} 
-  </div>
+
+  {% if products %}
+    <div class="products">
+      {% for product in products %}
+        {% include "components/product-admin.html" with product=product %}
+      {% endfor%} 
+    </div>
+  {% else %}
+    {% include "components/no-products.html" %}
+  {% endif %}
 </section>
         
 <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

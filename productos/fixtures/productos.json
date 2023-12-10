@@ -1,0 +1,156 @@
+[
+{
+    "model": "productos.product",
+    "pk": 1,
+    "fields": {
+        "title": "Lavarropas Samsung 10kg,\r\ncon Inteligencia Artificial Inverter",
+        "price": "660999.00",
+        "image": "products_images/lavarropa.jpg",
+        "stock": 9,
+        "created_at": "2023-12-08T12:22:23.848Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 2,
+    "fields": {
+        "title": "Altavoz Nest Mini Con Google Assistant",
+        "price": "21799.00",
+        "image": "products_images/altavoz-google.jpg",
+        "stock": 85,
+        "created_at": "2023-12-08T12:23:58.457Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 3,
+    "fields": {
+        "title": "Smartwatch Reloj Inteligente Redondo",
+        "price": "27050.00",
+        "image": "products_images/reloj_1.jpg",
+        "stock": 75,
+        "created_at": "2023-12-08T12:24:42.633Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 4,
+    "fields": {
+        "title": "Reloj Inteligente Hk8 Pro Max Ultra\r\ncon Pantalla",
+        "price": "40000.00",
+        "image": "products_images/reloj.jpg",
+        "stock": 60,
+        "created_at": "2023-12-08T12:25:17.254Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 5,
+    "fields": {
+        "title": "Nest Learning Termostato",
+        "price": "92304.00",
+        "image": "products_images/termostato.png",
+        "stock": 40,
+        "created_at": "2023-12-08T12:25:53.727Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 6,
+    "fields": {
+        "title": "Cerradura Inteligente\r\nNuki Smart Lock 3.0 Pro",
+        "price": "104450.00",
+        "image": "products_images/cerradura.png",
+        "stock": 25,
+        "created_at": "2023-12-08T12:26:51.800Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 7,
+    "fields": {
+        "title": "Cámara De Seguridad C3X Ezviz\r\ncon Visión Nocturna",
+        "price": "248500.00",
+        "image": "products_images/camara-ezviz.jpg",
+        "stock": 20,
+        "created_at": "2023-12-08T12:27:35.700Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 8,
+    "fields": {
+        "title": "Cámara Inteligente Wi-Fi De Vigilancia 360º",
+        "price": "147500.00",
+        "image": "products_images/camara.jpg",
+        "stock": 40,
+        "created_at": "2023-12-08T12:28:09.756Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 9,
+    "fields": {
+        "title": "Aspiradora Robot Inteligente Femmto\r\nTrapeadora Limpia Pisos",
+        "price": "144999.00",
+        "image": "products_images/aspiradora.jpg",
+        "stock": 30,
+        "created_at": "2023-12-08T12:28:40.879Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 10,
+    "fields": {
+        "title": "Robot De Cocina Automático\r\n6 Programas Inteligente Gadnic",
+        "price": "229999.00",
+        "image": "products_images/robot_de_cocina.jpg",
+        "stock": 15,
+        "created_at": "2023-12-08T12:30:15.452Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 11,
+    "fields": {
+        "title": "Balanza Inteligente Cocina\r\nCalorias, Carbohidratos, Proteina",
+        "price": "25000.00",
+        "image": "products_images/balanza_ia.jpg",
+        "stock": 60,
+        "created_at": "2023-12-08T12:30:47.957Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 12,
+    "fields": {
+        "title": "Cepillo De Dientes Oral-B Genius X",
+        "price": "70599.00",
+        "image": "products_images/cepillo-dientes.jpg",
+        "stock": 75,
+        "created_at": "2023-12-08T12:31:25.133Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 13,
+    "fields": {
+        "title": "Olla Electrica 6l A Presion\r\nTipo Arrocera",
+        "price": "79999.00",
+        "image": "products_images/olla-electrica.jpg",
+        "stock": 55,
+        "created_at": "2023-12-08T12:31:49.876Z"
+    }
+},
+{
+    "model": "productos.product",
+    "pk": 14,
+    "fields": {
+        "title": "Asistente de Voz ALtavoz Google Home",
+        "price": "79999.00",
+        "image": "products_images/asistente_google.jpg",
+        "stock": 45,
+        "created_at": "2023-12-10T01:36:24.662Z"
+    }
+}
+]

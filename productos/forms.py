@@ -6,7 +6,7 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = ['title', 'price', 'stock', 'image']
     
-    title = forms.CharField(label='Producto', min_length=1, max_length=30,
+    title = forms.CharField(label='Producto', min_length=1, max_length=125,
         widget=forms.TextInput(attrs={
             'placeholder': 'Nombre del producto',
             'class': "form-control",

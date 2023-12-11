@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
 from productos.models import Product
+from django.contrib import messages
 
 
 # Create your views here.
@@ -15,6 +16,7 @@ def crear_producto(request):
         form = ProductForm(request.POST, request.FILES) #Crea una instancia de productForm
         if form.is_valid():
             form.save()
+            messages.success(request, 'Producto creado exitosamente.')
             return redirect('productos-admin')
     else: #si el metodo es GET genera una instancia y se la pasa al contexto
         form = ProductForm()
@@ -27,6 +29,7 @@ def crear_producto(request):
 def eliminar_producto(request, id):
     product = get_object_or_404(Product, id = id)
     product.delete()
+    messages.success(request, 'Producto eliminado.')
     return redirect("productos-admin")
 
 @login_required(login_url='/login')
@@ -38,6 +41,7 @@ def editar_producto(request, id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Producto editado exitosamente.')
             return redirect('productos-admin')
 
     return render(request, 'editar_producto.html', {

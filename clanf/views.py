@@ -39,7 +39,7 @@ def login_view(request):
             
             if user:
                 login(request, user)
-                messages.success(request, 'Bienvenid@ {}'.format(user.username.upper()))
+                messages.info(request, 'Bienvenid@ {}'.format(user.username.upper()))
                 return redirect('productos-admin')
             else:
                 messages.error(request, 'Usuario y/o contraseña incorrectos.')

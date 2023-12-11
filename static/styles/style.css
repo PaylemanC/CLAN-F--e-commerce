@@ -172,7 +172,7 @@ ul {
 
 /*---------------- FIN NAV ----------------*/
 
-.message.info, .message.error {
+.message.info, .message.error, .message.success {
     padding: 8px 16px;
     border-radius: 8px;
     text-align: center;
@@ -184,10 +184,8 @@ ul {
 }
 
 .message.success {
-    color: white;
-    background-color: var(--relieve);    
-    font-size: 2rem;
-    padding: 16px 20px;
+    color: #39956a;
+    background-color: #d7f3e6;
 }
 
 .message.error {

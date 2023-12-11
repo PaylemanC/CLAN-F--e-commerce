@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 <!-- Herencia -->
 {% load static %}
+{% load tz %}
 <!-- Carga de archivos estáticos -->
 
 {% block styles %}
@@ -23,6 +24,7 @@
 <form method='POST' enctype="multipart/form-data" action="{% url 'editar_producto' id=product.id %}">
     {% csrf_token %}
     {{ form }}
+    <p>Este producto se creó el {{ product.created_at | date:"l j F Y, g:i A" }}</p>
     <div class="modal-footer mx-auto">
       <a href="{% url 'productos-admin' %}" class="btn btn-outline-info btn-lg">Cancelar</a>
       <button type="submit" class="btn btn-outline-info btn-lg">Guardar</button>

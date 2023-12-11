@@ -6,6 +6,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='products_images/', null=False, blank=False)
     stock = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)  
     
     def __str__(self):
         return self.title

@@ -145,9 +145,17 @@ button.btn-lg, a.btn-lg {
     width: 100%;
 }
 
-.product-date {
+.product-creationdate {
     margin-top: 1rem;
     text-align: end;
+}
+
+.product-creationdate, .product-updatedate {
+    color: var(--texto-secundario);
+}
+
+.edit-form {
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {

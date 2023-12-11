@@ -23,7 +23,10 @@
 {% block content %}
 <section class="editar-producto">
   <div class="basic">
-    <h1 class="product-name">{{ product.title }}</h1>
+    <div>
+      <h1 class="product-name">{{ product.title }}</h1>
+      <p class="product-updatedate">Última actualización: {{ product.updated_at | date:"l j F Y, g:i A" }}</p>
+    </div>
     <div class="product-image--container">
       <img src="{{ product.image.url }}" alt="{{ product.title }}" class="product-image">
     </div>

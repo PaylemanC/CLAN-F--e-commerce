@@ -12,19 +12,18 @@
     </div>
     <div class="product-buttons">
       <a href="{% url 'editar_producto' id=product.id %}" class="btnDefault editBtn" type="button">Editar</a>
-      <button type="button" class="btnDefault deleteBtn" data-bs-toggle="modal" data-bs-target="#deleteModal1">Eliminar</button>     
+      <button type="button" class="btnDefault deleteBtn" data-bs-toggle="modal" data-bs-target="#deleteModal{{ product.id }}">Eliminar</button>     
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="deleteModal1" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal{{ product.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p class="modal-advertise">¿Está seguro de que quiere eliminar este producto?</p>
+        <p class="modal-advertise">¿Está seguro de que quiere eliminar "{{product.title}}" de su lista de productos?</p>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary btnDefault" data-bs-dismiss="modal">No</button>
             <a href="{% url 'eliminar_producto' id=product.id %}" class="btnDefault deleteBtn" type="button">Si</a>

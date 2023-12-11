@@ -81,7 +81,14 @@
 .product-card__cart-button:focus,
 .product-card__cart-button:active {
     background-color: var(--turquesa-soft);
-    background-image: url('../assets/icons/cart-filled.svg');
+    background-image: url('../images/icons/cart-filled.svg');
+}
+
+.product-card__out-of-stock {
+    color: #cd1616;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.7rem;
 }
 
 .product-card__detail-button {

@@ -18,7 +18,7 @@
         "title": "Altavoz Nest Mini Con Google Assistant",
         "price": "21799.00",
         "image": "products_images/altavoz-google.jpg",
-        "stock": 85,
+        "stock": 0,
         "created_at": "2023-12-08T12:23:58.457Z",
         "updated_at": "2023-12-08T12:23:58.457Z"
     }
@@ -90,7 +90,7 @@
         "title": "Cámara Inteligente Wi-Fi De Vigilancia 360º",
         "price": "147500.00",
         "image": "products_images/camara.jpg",
-        "stock": 40,
+        "stock": 0,
         "created_at": "2023-12-08T12:28:09.756Z",
         "updated_at": "2023-12-08T12:28:09.756Z"
     }
@@ -126,7 +126,7 @@
         "title": "Balanza Inteligente Cocina\r\nCalorias, Carbohidratos, Proteina",
         "price": "25000.00",
         "image": "products_images/balanza_ia.jpg",
-        "stock": 60,
+        "stock": 0,
         "created_at": "2023-12-08T12:30:47.957Z",
         "updated_at": "2023-12-08T12:30:47.957Z"
     }

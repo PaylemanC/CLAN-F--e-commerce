@@ -29,6 +29,7 @@ def eliminar_producto(request, id):
     product.delete()
     return redirect("productos-admin")
 
+@login_required(login_url='/login')
 def editar_producto(request, id):
     product = get_object_or_404(Product, id=id)
     form = ProductForm(request.POST or None, instance=product)

@@ -21,13 +21,21 @@
 
 
 {% block content %}
-<form method='POST' enctype="multipart/form-data" action="{% url 'editar_producto' id=product.id %}">
+<section class="editar-producto">
+  <div class="basic">
+    <h1 class="product-name">{{ product.title }}</h1>
+    <div class="product-image--container">
+      <img src="{{ product.image.url }}" alt="{{ product.title }}" class="product-image">
+    </div>
+  </div>
+  <form method='POST' enctype="multipart/form-data" action="{% url 'editar_producto' id=product.id %}" class="edit-form">
     {% csrf_token %}
     {{ form }}
-    <p>Este producto se creó el {{ product.created_at | date:"l j F Y, g:i A" }}</p>
+    <p class="product-creationdate">Este producto se creó el {{ product.created_at | date:"l j F Y, g:i A" }}</p>
     <div class="modal-footer mx-auto">
       <a href="{% url 'productos-admin' %}" class="btn btn-outline-info btn-lg">Cancelar</a>
       <button type="submit" class="btn btn-outline-info btn-lg">Guardar</button>
     </div>
-</form>
+  </form>
+</section>
 {% endblock content %}

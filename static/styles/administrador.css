@@ -127,6 +127,29 @@ button.btn-lg, a.btn-lg {
     font-size: 1.6rem;
 }
 
+.editar-producto {
+    padding: 24px;
+}
+
+.basic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-image--container {
+    width: 150px;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-date {
+    margin-top: 1rem;
+    text-align: end;
+}
+
 @media screen and (max-width: 768px) {
     .product-card {
         justify-content: center;

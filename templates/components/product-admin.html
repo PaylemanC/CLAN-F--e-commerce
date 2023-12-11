@@ -12,30 +12,24 @@
     </div>
     <div class="product-buttons">
         <button class="btnDefault editBtn" type="button">Editar</button>
-
-        <button type="button" class="btn btn-primary btnDefault deleteBtn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-        Eliminar
-        </button>
+        <button type="button" class="btnDefault deleteBtn" data-bs-toggle="modal" data-bs-target="#deleteModal1">Eliminar</button>     
+    </div>
+</div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal1" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ¿Esta seguro que quiere eliminar este producto?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btnDefault" data-bs-dismiss="modal">No</button>
-        
-        <a href="{% url 'eliminar_producto' id=product.id %}" class="btnDefault deleteBtn" type="button">Si</a>
+        <p class="modal-advertise">¿Está seguro de que quiere eliminar este producto?</p>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btnDefault" data-bs-dismiss="modal">No</button>
+            <a href="{% url 'eliminar_producto' id=product.id %}" class="btnDefault deleteBtn" type="button">Si</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-        
-    </div>
 </div>

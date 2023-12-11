@@ -29,5 +29,18 @@ def eliminar_producto(request, id):
     product.delete()
     return redirect("productos-admin")
 
+def editar_producto(request, id):
+    product = get_object_or_404(Product, id=id)
+    form = ProductForm(request.POST or None, instance=product)
 
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('productos-admin')
+
+    return render(request, 'editar_producto.html', {
+        'form': form,
+        'product': product
+    })
     

@@ -11,8 +11,8 @@
         </div>
     </div>
     <div class="product-buttons">
-        <button class="btnDefault editBtn" type="button">Editar</button>
-        <button type="button" class="btnDefault deleteBtn" data-bs-toggle="modal" data-bs-target="#deleteModal1">Eliminar</button>     
+      <a href="{% url 'editar_producto' id=product.id %}" class="btnDefault editBtn" type="button">Editar</a>
+      <button type="button" class="btnDefault deleteBtn" data-bs-toggle="modal" data-bs-target="#deleteModal1">Eliminar</button>     
     </div>
 </div>
 

@@ -123,7 +123,7 @@ input.form-control {
     margin: 8px 0;
 }
 
-button.btn-lg {
+button.btn-lg, a.btn-lg {
     font-size: 1.6rem;
 }
 
